@@ -9,10 +9,18 @@
       "errors": [
         "name 'POSTS_DIR' is not defined"
       ]
+    },
+    {
+      "timestamp": "2026-02-10T16:05:06.054264Z",
+      "status": "success",
+      "generated_topics": 0,
+      "generated_articles": 0,
+      "published_articles": 0,
+      "errors": []
     }
   ],
   "articles_published": 0,
-  "last_run": "2026-02-10T16:04:11.600339Z",
+  "last_run": "2026-02-10T16:05:06.054264Z",
   "errors": [
     "name 'POSTS_DIR' is not defined"
   ]
