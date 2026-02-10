@@ -1,0 +1,13 @@
+2026-02-10 16:04:11,600 [INFO] Starting DiscoveryAgent.
+2026-02-10 16:04:11,601 [INFO] Starting ContentAgent.
+2026-02-10 16:04:11,601 [ERROR] Pipeline failed with an unhandled exception.
+Traceback (most recent call last):
+  File "C:\Users\xgal\Desktop\NeuralStack\main.py", line 141, in run_pipeline
+    content = ContentAgent(DATA_DIR, POSTS_DIR)
+                                     ^^^^^^^^^
+NameError: name 'POSTS_DIR' is not defined
+2026-02-10 16:05:06,054 [INFO] Starting DiscoveryAgent.
+2026-02-10 16:05:06,056 [INFO] Starting ContentAgent.
+2026-02-10 16:05:06,056 [INFO] Starting ValidationAgent.
+2026-02-10 16:05:06,056 [INFO] Starting DistributionAgent.
+2026-02-10 16:05:06,057 [INFO] Pipeline completed successfully.
