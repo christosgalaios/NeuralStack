@@ -12,8 +12,8 @@ from agents.distribution import DistributionAgent
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
-SITE_DIR = BASE_DIR / "site"
-POSTS_DIR = SITE_DIR / "posts"
+ARTICLES_DIR = BASE_DIR / "articles"
+ASSETS_DIR = BASE_DIR / "assets"
 LOG_FILE = DATA_DIR / "pipeline.log"
 PERFORMANCE_FILE = DATA_DIR / "performance.json"
 TOPICS_FILE = DATA_DIR / "topics.json"
@@ -34,8 +34,8 @@ def setup_logging() -> None:
 
 def ensure_initial_files() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    SITE_DIR.mkdir(parents=True, exist_ok=True)
-    POSTS_DIR.mkdir(parents=True, exist_ok=True)
+    ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
+    ASSETS_DIR.mkdir(parents=True, exist_ok=True)
 
     if not TOPICS_FILE.exists():
         TOPICS_FILE.write_text("[]", encoding="utf-8")
@@ -53,14 +53,55 @@ def ensure_initial_files() -> None:
             ),
             encoding="utf-8",
         )
-
-    index_file = SITE_DIR / "index.md"
+    # Minimal router-style index; DistributionAgent can overwrite with richer content.
+    index_file = BASE_DIR / "index.html"
     if not index_file.exists():
         index_file.write_text(
-            "# NeuralStack Autonomous Tech Insights\n\n"
-            "Welcome to an automatically updated collection of deep-dive articles on\n"
-            "developer tools, compatibility guides, and translated tech insights.\n\n"
-            "New long-form posts are generated and validated daily.\n",
+            "<!DOCTYPE html>\n"
+            "<html>\n"
+            "<head>\n"
+            "  <meta charset=\"utf-8\" />\n"
+            "  <title>Technical Knowledge Base</title>\n"
+            "  <link rel=\"stylesheet\" href=\"assets/style.css\" />\n"
+            "</head>\n"
+            "<body>\n"
+            "  <h1>Technical Knowledge Base</h1>\n"
+            "  <p>In-depth technical guides and compatibility documentation.</p>\n"
+            "  <ul>\n"
+            "    <li><a href=\"articles/test.html\">Test Article</a></li>\n"
+            "  </ul>\n"
+            "</body>\n"
+            "</html>\n",
+            encoding="utf-8",
+        )
+
+    # One-time manual test article to validate routing.
+    test_article = ARTICLES_DIR / "test.html"
+    if not test_article.exists():
+        test_article.write_text(
+            "<!DOCTYPE html>\n"
+            "<html>\n"
+            "<head>\n"
+            "  <meta charset=\"utf-8\" />\n"
+            "  <title>Test Article</title>\n"
+            "  <link rel=\"stylesheet\" href=\"../assets/style.css\" />\n"
+            "</head>\n"
+            "<body>\n"
+            "  <h1>Test Article</h1>\n"
+            "  <p>If you can read this, article routing works.</p>\n"
+            "</body>\n"
+            "</html>\n",
+            encoding="utf-8",
+        )
+
+    style_file = ASSETS_DIR / "style.css"
+    if not style_file.exists():
+        style_file.write_text(
+            "body { font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif; "
+            "max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }\n"
+            "a { color: #0366d6; text-decoration: none; }\n"
+            "a:hover { text-decoration: underline; }\n"
+            "h1, h2, h3 { line-height: 1.25; }\n",
             encoding="utf-8",
         )
 
@@ -102,11 +143,11 @@ def run_pipeline() -> None:
         run_entry["generated_articles"] = len(drafts)
 
         logging.info("Starting ValidationAgent.")
-        validator = ValidationAgent(DATA_DIR, POSTS_DIR)
+        validator = ValidationAgent(DATA_DIR, ARTICLES_DIR)
         approved_drafts = validator.run(drafts)
 
         logging.info("Starting DistributionAgent.")
-        distribution = DistributionAgent(DATA_DIR, SITE_DIR, POSTS_DIR)
+        distribution = DistributionAgent(DATA_DIR, BASE_DIR, ARTICLES_DIR)
         published_files = distribution.run(approved_drafts)
         run_entry["published_articles"] = len(published_files)
 

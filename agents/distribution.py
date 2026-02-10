@@ -12,65 +12,90 @@ class DistributionAgent:
     and keeping supporting artefacts like sitemap and RSS feed up to date.
     """
 
-    def __init__(self, data_dir: Path, site_dir: Path, posts_dir: Path) -> None:
+    def __init__(self, data_dir: Path, root_dir: Path, articles_dir: Path) -> None:
         self.data_dir = Path(data_dir)
-        self.site_dir = Path(site_dir)
-        self.posts_dir = Path(posts_dir)
+        self.root_dir = Path(root_dir)
+        self.articles_dir = Path(articles_dir)
 
     def _publish_article(self, draft: DraftArticle) -> Path:
-        self.posts_dir.mkdir(parents=True, exist_ok=True)
-        filename = f"{draft.slug}.md"
-        path = self.posts_dir / filename
+        self.articles_dir.mkdir(parents=True, exist_ok=True)
+        filename = f"{draft.slug}.html"
+        path = self.articles_dir / filename
 
-        front_matter = (
-            "---\n"
-            f"title: \"{draft.title}\"\n"
-            f"date: {draft.created_at}\n"
-            "layout: post\n"
-            "---\n\n"
+        body = draft.content
+        html = (
+            "<!DOCTYPE html>\n"
+            "<html>\n"
+            "<head>\n"
+            "  <meta charset=\"utf-8\" />\n"
+            f"  <title>{draft.title}</title>\n"
+            "  <link rel=\"stylesheet\" href=\"../assets/style.css\" />\n"
+            "</head>\n"
+            "<body>\n"
+            f"<article>\n{body}\n</article>\n"
+            "</body>\n"
+            "</html>\n"
         )
 
-        path.write_text(front_matter + draft.content + "\n", encoding="utf-8")
+        path.write_text(html, encoding="utf-8")
         return path
 
     def _load_posts_metadata(self) -> List[dict]:
         posts: List[dict] = []
-        if not self.posts_dir.exists():
+        if not self.articles_dir.exists():
             return posts
-        for file in sorted(self.posts_dir.glob("*.md")):
+        for file in sorted(self.articles_dir.glob("*.html")):
             text = file.read_text(encoding="utf-8")
-            title_line = next((line for line in text.splitlines() if line.startswith("title: ")), None)
-            title = title_line.split(":", 1)[1].strip().strip('"') if title_line else file.stem
+            title = file.stem
+            # Try to extract a <title> if present.
+            marker_start = "<title>"
+            marker_end = "</title>"
+            if marker_start in text and marker_end in text:
+                start_idx = text.index(marker_start) + len(marker_start)
+                end_idx = text.index(marker_end, start_idx)
+                title = text[start_idx:end_idx].strip()
             posts.append(
                 {
                     "title": title,
                     "slug": file.stem,
-                    "path": f"posts/{file.name}",
+                    "path": f"articles/{file.name}",
                     "date": datetime.utcfromtimestamp(file.stat().st_mtime).isoformat() + "Z",
                 }
             )
         return posts
 
     def _update_index(self, posts: List[dict]) -> None:
-        index = self.site_dir / "index.md"
-        lines = [
-            "# NeuralStack Autonomous Tech Insights",
-            "",
-            "Curated long-form guides on developer tooling, compatibility, and translated tech insight.",
-            "",
-            "## Latest posts",
-            "",
-        ]
-        if not posts:
-            lines.append("No posts have been published yet. Check back tomorrow.")
-        else:
-            for post in sorted(posts, key=lambda p: p["date"], reverse=True):
-                lines.append(f"- [{post['title']}]({post['path']})  \n  _Updated {post['date']}_")
+        index = self.root_dir / "index.html"
+        items = []
+        for post in sorted(posts, key=lambda p: p["date"], reverse=True):
+            items.append(
+                f'    <li><a href="{post["path"]}">{post["title"]}</a>'
+                f' <span style="font-size: 0.8em; color: #666;">(updated {post["date"]})</span></li>'
+            )
+        items_html = "\n".join(items) if items else '    <li>No articles have been published yet. Check back tomorrow.</li>'
 
-        index.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        html = (
+            "<!DOCTYPE html>\n"
+            "<html>\n"
+            "<head>\n"
+            "  <meta charset=\"utf-8\" />\n"
+            "  <title>Technical Knowledge Base</title>\n"
+            "  <link rel=\"stylesheet\" href=\"assets/style.css\" />\n"
+            "</head>\n"
+            "<body>\n"
+            "  <h1>Technical Knowledge Base</h1>\n"
+            "  <p>In-depth technical guides and compatibility documentation.</p>\n"
+            "  <h2>Articles</h2>\n"
+            "  <ul>\n"
+            f"{items_html}\n"
+            "  </ul>\n"
+            "</body>\n"
+            "</html>\n"
+        )
+        index.write_text(html, encoding="utf-8")
 
     def _update_sitemap(self, posts: List[dict]) -> None:
-        sitemap = self.site_dir / "sitemap.xml"
+        sitemap = self.root_dir / "sitemap.xml"
         # URL structure assumes GitHub Pages with project site at /.
         base_url = "{{BASE_URL}}"
         urls = [f"{base_url}/"]
@@ -96,7 +121,7 @@ class DistributionAgent:
         sitemap.write_text(xml, encoding="utf-8")
 
     def _update_rss(self, posts: List[dict]) -> None:
-        feed = self.site_dir / "feed.xml"
+        feed = self.root_dir / "feed.xml"
         base_url = "{{BASE_URL}}"
         items = []
         for post in sorted(posts, key=lambda p: p["date"], reverse=True):
