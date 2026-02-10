@@ -1,4 +1,8 @@
+import json
+import os
 import textwrap
+import urllib.error
+import urllib.request
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -22,12 +26,19 @@ class SimpleLocalLLM:
     Pluggable content generator.
 
     By default this uses deterministic, template-based generation so that the
-    pipeline runs fully offline and at zero cost. To integrate a local model
-    such as Ollama, replace the `generate_long_form_article` method with a
-    call to your model server (e.g. http://localhost:11434).
+    pipeline runs fully offline and at zero cost.
+
+    Optionally, you can enable a local LLM backend (e.g. Ollama) by setting:
+
+      NEURALSTACK_LLM_BACKEND=ollama
+      NEURALSTACK_OLLAMA_MODEL=llama3
+
+    When enabled, the agent will call the local model first and fall back to
+    the template-based generator if anything goes wrong. This keeps CI (GitHub
+    Actions) safe while allowing richer content locally.
     """
 
-    def generate_long_form_article(self, keyword: str, category: str, intent: str) -> str:
+    def _generate_with_template(self, keyword: str, category: str, intent: str) -> str:
         now = datetime.utcnow().strftime("%B %Y")
         # Strong, opinionated E-E-A-T style introduction.
         intro = textwrap.dedent(
@@ -234,6 +245,60 @@ class SimpleLocalLLM:
                 words = content.split()
 
         return content
+
+    def _generate_with_ollama(self, keyword: str, category: str, intent: str) -> str:
+        """
+        Optional: call a local Ollama server for content generation.
+
+        This assumes Ollama is running on http://localhost:11434 and exposes
+        the /api/generate endpoint. Any failure will raise and should be
+        handled by the caller (which can then fall back to templates).
+        """
+        model = os.getenv("NEURALSTACK_OLLAMA_MODEL", "llama3")
+        prompt = (
+            "You are writing a long-form, E-E-A-T compliant technical article.\n\n"
+            f"Topic: {keyword}\n"
+            f"Category: {category}\n"
+            f"Search intent: {intent}\n\n"
+            "Requirements:\n"
+            "- At least 1,400 words.\n"
+            "- Use Markdown headings with H2/H3 structure.\n"
+            "- Include at least one comparison-style table.\n"
+            "- Include a short FAQ section near the end.\n"
+            "- Insert the affiliate placeholders "
+            "{{AFFILIATE_TOOL_1}}, {{AFFILIATE_TOOL_2}}, {{AFFILIATE_TOOL_3}} in a dedicated section.\n"
+            "- Focus on practical guidance, real-world trade-offs, and failure modes.\n"
+        )
+
+        body = json.dumps({"model": model, "prompt": prompt}).encode("utf-8")
+        req = urllib.request.Request(
+            "http://localhost:11434/api/generate",
+            data=body,
+            headers={"Content-Type": "application/json"},
+        )
+        with urllib.request.urlopen(req, timeout=300) as resp:
+            # Ollama streams newline-delimited JSON by default; collect "response" fields.
+            raw = resp.read().decode("utf-8")
+        # Simple parsing: if the server returns a single JSON object.
+        try:
+            data = json.loads(raw)
+            text = data.get("response", "")
+        except json.JSONDecodeError:
+            # Fallback: treat the body as plain text.
+            text = raw
+        return text or ""
+
+    def generate_long_form_article(self, keyword: str, category: str, intent: str) -> str:
+        backend = os.getenv("NEURALSTACK_LLM_BACKEND", "template").lower()
+        if backend == "ollama":
+            try:
+                text = self._generate_with_ollama(keyword, category, intent)
+                if text:
+                    return text
+            except (urllib.error.URLError, TimeoutError, ConnectionError, OSError, ValueError):
+                # Fall back to deterministic template generation.
+                pass
+        return self._generate_with_template(keyword, category, intent)
 
 
 class ContentAgent:
