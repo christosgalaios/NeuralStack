@@ -295,3 +295,31 @@
 2026-03-03 04:44:54,490 [INFO] Published TikTok script: terminal commands every developer should know [this_or_that] (score=95)
 2026-03-03 04:44:54,490 [INFO] TikTok pipeline complete: 5 scripts published.
 2026-03-03 04:44:54,490 [INFO] Pipeline completed successfully.
+2026-03-04 04:28:24,158 [INFO] Starting DiscoveryAgent.
+2026-03-04 04:28:24,162 [INFO] Starting ContentAgent.
+2026-03-04 04:28:24,167 [INFO] Starting ValidationAgent.
+2026-03-04 04:28:24,169 [INFO] Starting DistributionAgent.
+2026-03-04 04:28:24,176 [INFO] Starting TikTokAgent.
+2026-03-04 04:28:24,177 [INFO] TikTok discovery found 5 new topics.
+2026-03-04 04:28:24,177 [INFO] Generated TikTok script via template: your phone is tracking you — here's how to stop it
+2026-03-04 04:28:24,189 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-04 04:28:24,189 [WARNING] Video production failed for: your phone is tracking you — here's how to stop it
+2026-03-04 04:28:24,189 [INFO] Published TikTok script: your phone is tracking you — here's how to stop it [text_story] (score=95)
+2026-03-04 04:28:24,189 [INFO] Generated TikTok script via template: why senior devs hate unnecessary meetings
+2026-03-04 04:28:24,190 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-04 04:28:24,190 [WARNING] Video production failed for: why senior devs hate unnecessary meetings
+2026-03-04 04:28:24,190 [INFO] Published TikTok script: why senior devs hate unnecessary meetings [text_story] (score=95)
+2026-03-04 04:28:24,190 [INFO] Generated TikTok script via template: switching from Windows to Linux as a developer
+2026-03-04 04:28:24,191 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-04 04:28:24,191 [WARNING] Video production failed for: switching from Windows to Linux as a developer
+2026-03-04 04:28:24,191 [INFO] Published TikTok script: switching from Windows to Linux as a developer [text_story] (score=95)
+2026-03-04 04:28:24,191 [INFO] Generated TikTok script via template: the rise of AI agents and what it means for your job
+2026-03-04 04:28:24,192 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-04 04:28:24,192 [WARNING] Video production failed for: the rise of AI agents and what it means for your job
+2026-03-04 04:28:24,192 [INFO] Published TikTok script: the rise of AI agents and what it means for your job [text_story] (score=95)
+2026-03-04 04:28:24,192 [INFO] Generated TikTok script via template: how to mass-apply to developer jobs the smart way
+2026-03-04 04:28:24,193 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-04 04:28:24,193 [WARNING] Video production failed for: how to mass-apply to developer jobs the smart way
+2026-03-04 04:28:24,193 [INFO] Published TikTok script: how to mass-apply to developer jobs the smart way [text_story] (score=95)
+2026-03-04 04:28:24,193 [INFO] TikTok pipeline complete: 5 scripts published.
+2026-03-04 04:28:24,193 [INFO] Pipeline completed successfully.
