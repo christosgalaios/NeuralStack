@@ -283,10 +283,19 @@
       "published_articles": 5,
       "errors": [],
       "tiktok_scripts_published": 5
+    },
+    {
+      "timestamp": "2026-03-05T04:43:34.098355Z",
+      "status": "success",
+      "generated_topics": 5,
+      "generated_articles": 5,
+      "published_articles": 5,
+      "errors": [],
+      "tiktok_scripts_published": 5
     }
   ],
-  "articles_published": 40,
-  "last_run": "2026-03-04T04:28:24.158797Z",
+  "articles_published": 45,
+  "last_run": "2026-03-05T04:43:34.098355Z",
   "errors": [
     "name 'POSTS_DIR' is not defined"
   ]

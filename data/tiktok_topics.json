@@ -308,5 +308,45 @@
     "short": true,
     "status": "published",
     "created_at": "2026-03-04T04:28:24.176905Z"
+  },
+  {
+    "id": "e58d0ee64122",
+    "topic": "password managers and why you need one yesterday",
+    "format": "this_or_that",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-05T04:43:34.117070Z"
+  },
+  {
+    "id": "0191431aa1e6",
+    "topic": "the easiest way hackers get into your accounts",
+    "format": "this_or_that",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-05T04:43:34.117083Z"
+  },
+  {
+    "id": "a77f35e56f11",
+    "topic": "AI coding assistants and whether they actually help",
+    "format": "this_or_that",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-05T04:43:34.117109Z"
+  },
+  {
+    "id": "731518573433",
+    "topic": "Docker explained so simply your manager could understand",
+    "format": "text_story",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-05T04:43:34.117115Z"
+  },
+  {
+    "id": "c789259cec15",
+    "topic": "two-factor authentication mistakes everyone makes",
+    "format": "this_or_that",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-05T04:43:34.117119Z"
   }
 ]
