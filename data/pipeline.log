@@ -351,3 +351,31 @@
 2026-03-05 04:43:34,134 [INFO] Published TikTok script: two-factor authentication mistakes everyone makes [this_or_that] (score=95)
 2026-03-05 04:43:34,134 [INFO] TikTok pipeline complete: 5 scripts published.
 2026-03-05 04:43:34,135 [INFO] Pipeline completed successfully.
+2026-03-06 04:41:01,230 [INFO] Starting DiscoveryAgent.
+2026-03-06 04:41:01,234 [INFO] Starting ContentAgent.
+2026-03-06 04:41:01,239 [INFO] Starting ValidationAgent.
+2026-03-06 04:41:01,241 [INFO] Starting DistributionAgent.
+2026-03-06 04:41:01,249 [INFO] Starting TikTokAgent.
+2026-03-06 04:41:01,250 [INFO] TikTok discovery found 5 new topics.
+2026-03-06 04:41:01,250 [INFO] Generated TikTok script via template: Docker explained so simply your manager could understand
+2026-03-06 04:41:01,263 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-06 04:41:01,263 [WARNING] Video production failed for: Docker explained so simply your manager could understand
+2026-03-06 04:41:01,263 [INFO] Published TikTok script: Docker explained so simply your manager could understand [quick_fact] (score=95)
+2026-03-06 04:41:01,264 [INFO] Generated TikTok script via template: two-factor authentication mistakes everyone makes
+2026-03-06 04:41:01,264 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-06 04:41:01,264 [WARNING] Video production failed for: two-factor authentication mistakes everyone makes
+2026-03-06 04:41:01,264 [INFO] Published TikTok script: two-factor authentication mistakes everyone makes [quick_fact] (score=95)
+2026-03-06 04:41:01,265 [INFO] Generated TikTok script via template: password managers and why you need one yesterday
+2026-03-06 04:41:01,265 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-06 04:41:01,265 [WARNING] Video production failed for: password managers and why you need one yesterday
+2026-03-06 04:41:01,265 [INFO] Published TikTok script: password managers and why you need one yesterday [quick_fact] (score=95)
+2026-03-06 04:41:01,266 [INFO] Generated TikTok script via template: TypeScript tricks that feel illegal
+2026-03-06 04:41:01,266 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-06 04:41:01,266 [WARNING] Video production failed for: TypeScript tricks that feel illegal
+2026-03-06 04:41:01,266 [INFO] Published TikTok script: TypeScript tricks that feel illegal [quick_fact] (score=95)
+2026-03-06 04:41:01,266 [INFO] Generated TikTok script via template: the rise of AI agents and what it means for your job
+2026-03-06 04:41:01,267 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-06 04:41:01,267 [WARNING] Video production failed for: the rise of AI agents and what it means for your job
+2026-03-06 04:41:01,267 [INFO] Published TikTok script: the rise of AI agents and what it means for your job [quick_fact] (score=95)
+2026-03-06 04:41:01,268 [INFO] TikTok pipeline complete: 5 scripts published.
+2026-03-06 04:41:01,268 [INFO] Pipeline completed successfully.

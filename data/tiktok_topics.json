@@ -348,5 +348,45 @@
     "short": true,
     "status": "published",
     "created_at": "2026-03-05T04:43:34.117119Z"
+  },
+  {
+    "id": "d4e35ac41f75",
+    "topic": "Docker explained so simply your manager could understand",
+    "format": "quick_fact",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-06T04:41:01.250062Z"
+  },
+  {
+    "id": "cc1c96961217",
+    "topic": "two-factor authentication mistakes everyone makes",
+    "format": "quick_fact",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-06T04:41:01.250073Z"
+  },
+  {
+    "id": "7afc7c4a798e",
+    "topic": "password managers and why you need one yesterday",
+    "format": "quick_fact",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-06T04:41:01.250080Z"
+  },
+  {
+    "id": "5e5c170ec9d7",
+    "topic": "TypeScript tricks that feel illegal",
+    "format": "quick_fact",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-06T04:41:01.250085Z"
+  },
+  {
+    "id": "e3059b7bd9ce",
+    "topic": "the rise of AI agents and what it means for your job",
+    "format": "quick_fact",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-06T04:41:01.250089Z"
   }
 ]
