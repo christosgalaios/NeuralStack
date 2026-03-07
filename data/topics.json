@@ -307,7 +307,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-10T16:04:11.601341Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-wsl2gpupassthrough",
@@ -317,7 +317,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-10T16:04:11.601341Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorchwithrocm",
@@ -327,7 +327,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-10T16:04:11.601341Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorrtwithonnx",
@@ -337,7 +337,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-10T16:04:11.601341Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-postgresqlwithprisma",
@@ -347,7 +347,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-10T16:04:11.601341Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "news-japandevcommunityreaction",
@@ -357,7 +357,7 @@
     "difficulty_score": 0.32,
     "source": "heuristic-foreign-news",
     "created_at": "2026-02-10T16:04:11.601341Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "news-chineseopensourceecosystem",
@@ -367,7 +367,7 @@
     "difficulty_score": 0.32,
     "source": "heuristic-foreign-news",
     "created_at": "2026-02-10T16:04:11.601341Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "news-tokyostartupsusing",
@@ -377,7 +377,7 @@
     "difficulty_score": 0.32,
     "source": "heuristic-foreign-news",
     "created_at": "2026-02-10T16:04:11.601341Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "news-shanghaiailabstesting",
@@ -387,7 +387,7 @@
     "difficulty_score": 0.32,
     "source": "heuristic-foreign-news",
     "created_at": "2026-02-10T16:04:11.601341Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "news-cncloudproviderpartnership",
@@ -397,7 +397,7 @@
     "difficulty_score": 0.32,
     "source": "heuristic-foreign-news",
     "created_at": "2026-02-10T16:04:11.601341Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "devtools-vscode-zededitor-full-stackdevelopers",
@@ -3557,7 +3557,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-docker-onapplesiliconm3",
@@ -3567,7 +3567,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-docker-withwsl2gpupassthrough",
@@ -3577,7 +3577,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-docker-withrocmonamdgpus",
@@ -3587,7 +3587,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-docker-withcuda124",
@@ -3597,7 +3597,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-docker-onraspberrypi5",
@@ -3607,7 +3607,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-docker-insidegithubcodespaces",
@@ -3617,7 +3617,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-docker-onnixos",
@@ -3627,7 +3627,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-docker-withprismaorm",
@@ -3637,7 +3637,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-docker-withdockercomposev2",
@@ -3647,7 +3647,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-docker-withkubernetes130",
@@ -3657,7 +3657,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-onwindows11arm",
@@ -3667,7 +3667,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-onapplesiliconm3",
@@ -3677,7 +3677,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-withwsl2gpupassthrough",
@@ -3687,7 +3687,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-withrocmonamdgpus",
@@ -3697,7 +3697,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-withcuda124",
@@ -3707,7 +3707,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-onraspberrypi5",
@@ -3717,7 +3717,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-insidegithubcodespaces",
@@ -3727,7 +3727,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-onnixos",
@@ -3737,7 +3737,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-withprismaorm",
@@ -3747,7 +3747,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-withdockercomposev2",
@@ -3757,7 +3757,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-podman-withkubernetes130",
@@ -3767,7 +3767,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-onwindows11arm",
@@ -3777,7 +3777,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-onapplesiliconm3",
@@ -3787,7 +3787,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-withwsl2gpupassthrough",
@@ -3797,7 +3797,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-withrocmonamdgpus",
@@ -3807,7 +3807,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-withcuda124",
@@ -3817,7 +3817,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-onraspberrypi5",
@@ -3827,7 +3827,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-insidegithubcodespaces",
@@ -3837,7 +3837,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-onnixos",
@@ -3847,7 +3847,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-withprismaorm",
@@ -3857,7 +3857,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-withdockercomposev2",
@@ -3867,7 +3867,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-pytorch-withkubernetes130",
@@ -3877,7 +3877,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-onwindows11arm",
@@ -3887,7 +3887,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-onapplesiliconm3",
@@ -3897,7 +3897,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-withwsl2gpupassthrough",
@@ -3907,7 +3907,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-withrocmonamdgpus",
@@ -3917,7 +3917,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-withcuda124",
@@ -3927,7 +3927,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-onraspberrypi5",
@@ -3937,7 +3937,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-insidegithubcodespaces",
@@ -3947,7 +3947,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-onnixos",
@@ -3957,7 +3957,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-withprismaorm",
@@ -3967,7 +3967,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-withdockercomposev2",
@@ -3977,7 +3977,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-tensorflow-withkubernetes130",
@@ -3987,7 +3987,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-postgresql-onwindows11arm",
@@ -3997,7 +3997,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "published"
+    "status": "new"
   },
   {
     "id": "compat-postgresql-onapplesiliconm3",
