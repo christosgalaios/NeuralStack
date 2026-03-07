@@ -388,5 +388,45 @@
     "short": true,
     "status": "published",
     "created_at": "2026-03-06T04:41:01.250089Z"
+  },
+  {
+    "id": "75de2004d29d",
+    "topic": "keyboard shortcuts that 10x your coding speed",
+    "format": "this_or_that",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-07T04:20:38.278779Z"
+  },
+  {
+    "id": "83cb469969a2",
+    "topic": "the mass layoffs in tech and how to survive",
+    "format": "this_or_that",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-07T04:20:38.278792Z"
+  },
+  {
+    "id": "4387324b51b8",
+    "topic": "freelancing as a developer \u2014 the truth nobody shares",
+    "format": "this_or_that",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-07T04:20:38.278800Z"
+  },
+  {
+    "id": "e68862ff55b0",
+    "topic": "your phone is tracking you \u2014 here's how to stop it",
+    "format": "this_or_that",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-07T04:20:38.278805Z"
+  },
+  {
+    "id": "64ef54aed170",
+    "topic": "remote developer jobs that pay six figures",
+    "format": "this_or_that",
+    "short": true,
+    "status": "published",
+    "created_at": "2026-03-07T04:20:38.278809Z"
   }
 ]

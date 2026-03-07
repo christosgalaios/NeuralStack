@@ -3957,7 +3957,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "new"
+    "status": "published"
   },
   {
     "id": "compat-tensorflow-withprismaorm",
@@ -3967,7 +3967,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "new"
+    "status": "published"
   },
   {
     "id": "compat-tensorflow-withdockercomposev2",
@@ -3977,7 +3977,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "new"
+    "status": "published"
   },
   {
     "id": "compat-tensorflow-withkubernetes130",
@@ -3987,7 +3987,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "new"
+    "status": "published"
   },
   {
     "id": "compat-postgresql-onwindows11arm",
@@ -3997,7 +3997,7 @@
     "difficulty_score": 0.28,
     "source": "heuristic-compatibility",
     "created_at": "2026-02-27T21:41:01.435369Z",
-    "status": "new"
+    "status": "published"
   },
   {
     "id": "compat-postgresql-onapplesiliconm3",
