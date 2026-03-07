@@ -4,7 +4,7 @@ import textwrap
 import urllib.error
 import urllib.request
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Dict, Any
 
@@ -59,7 +59,7 @@ class SimpleLocalLLM:
     """
 
     def _generate_with_template(self, keyword: str, category: str, intent: str) -> str:
-        now = datetime.utcnow().strftime("%B %Y")
+        now = datetime.now(timezone.utc).strftime("%B %Y")
         # Strong, opinionated E-E-A-T style introduction.
         intro = textwrap.dedent(
             f"""
@@ -347,7 +347,7 @@ class ContentAgent:
                 category=topic.get("category", ""),
                 intent=topic.get("intent", ""),
             )
-            created_at = datetime.utcnow().isoformat() + "Z"
+            created_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
             drafts.append(
                 DraftArticle(
                     topic_id=topic["id"],

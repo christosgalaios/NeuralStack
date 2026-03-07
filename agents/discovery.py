@@ -1,6 +1,6 @@
 import json
 from dataclasses import dataclass, asdict
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Dict, Any
 
@@ -109,7 +109,7 @@ class DiscoveryAgent:
         ]
 
         topics: List[Topic] = []
-        now = datetime.utcnow().isoformat() + "Z"
+        now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
         # DevTools comparisons — for each audience, pick ordered pairs
         for a in devtools:

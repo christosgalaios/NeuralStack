@@ -1,7 +1,7 @@
 import json
 import os
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List
 
@@ -141,7 +141,7 @@ class DistributionAgent:
             entries.append(
                 "  <url>\n"
                 f"    <loc>{url}</loc>\n"
-                f"    <lastmod>{datetime.utcnow().date().isoformat()}</lastmod>\n"
+                f"    <lastmod>{datetime.now(timezone.utc).date().isoformat()}</lastmod>\n"
                 "    <changefreq>daily</changefreq>\n"
                 "    <priority>0.7</priority>\n"
                 "  </url>"

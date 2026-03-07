@@ -1,6 +1,6 @@
 import json
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from agents.discovery import DiscoveryAgent
@@ -137,7 +137,7 @@ def run_pipeline() -> None:
 
     performance = load_performance()
     run_entry = {
-        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "status": "started",
         "generated_topics": 0,
         "generated_articles": 0,

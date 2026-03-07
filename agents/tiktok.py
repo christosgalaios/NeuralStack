@@ -16,7 +16,7 @@ import textwrap
 import urllib.error
 import urllib.request
 from dataclasses import dataclass, asdict, field
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
@@ -514,7 +514,7 @@ class TikTokDiscoveryAgent:
         existing_ids = {t.get("id") for t in existing}
 
         # Deterministic seed based on current date so each day yields fresh combos
-        day_seed = int(datetime.utcnow().strftime("%Y%m%d"))
+        day_seed = int(datetime.now(timezone.utc).strftime("%Y%m%d"))
         rng = random.Random(day_seed)
 
         # Separate short (6-7s) and standard formats
@@ -549,7 +549,7 @@ class TikTokDiscoveryAgent:
                     "format": fmt,
                     "short": VIRAL_FORMATS[fmt].get("short", False),
                     "status": "new",
-                    "created_at": datetime.utcnow().isoformat() + "Z",
+                    "created_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                 }
                 new_topics.append(entry)
                 existing.append(entry)
@@ -1016,7 +1016,7 @@ class TikTokScriptGenerator:
             sound_suggestion=fmt["sound_mood"],
             cta=cta,
             estimated_duration_sec=duration,
-            created_at=datetime.utcnow().isoformat() + "Z",
+            created_at=datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
             metadata={
                 "format_label": fmt["label"],
                 "word_count": sum(len(seg["text"].split()) for seg in segments),
@@ -1083,7 +1083,7 @@ class TikTokScriptGenerator:
                 sound_suggestion=script_data.get("sound_mood", fmt["sound_mood"]),
                 cta=script_data.get("cta", ""),
                 estimated_duration_sec=60,
-                created_at=datetime.utcnow().isoformat() + "Z",
+                created_at=datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                 metadata={"source": "ollama", "model": model},
             )
         except Exception:

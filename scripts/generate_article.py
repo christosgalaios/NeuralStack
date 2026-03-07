@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from templates.article_template import ArticleMeta, ArticleSection, render_article_html
@@ -40,7 +40,7 @@ def generate_article(slug: str, title: str, description: str) -> Path:
     """
     ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
 
-    created_at = datetime.utcnow()
+    created_at = datetime.now(timezone.utc)
     meta = ArticleMeta(title=title, description=description, created_at=created_at)
 
     sections = [
