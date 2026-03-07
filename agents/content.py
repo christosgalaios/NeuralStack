@@ -80,17 +80,88 @@ class SimpleLocalLLM:
             """
         ).strip()
 
-    def _pad_to_min_words(self, content: str) -> str:
-        padding = (
-            " In practice, each organisation should run small, low-risk experiments, "
+    _PADDING_POOL = [
+        (
+            "In practice, each organisation should run small, low-risk experiments, "
             "observe the operational impact over several weeks, and only then roll out "
             "broader changes. Document the trade-offs clearly so that future engineers "
             "can understand not just what you chose, but why other options were rejected."
-        )
-        words = content.split()
-        while len(words) < MIN_WORDS:
-            content += "\n\n" + padding
-            words = content.split()
+        ),
+        (
+            "Before committing to any tool or workflow change, define what success "
+            "looks like in measurable terms. Vague goals like 'improve developer "
+            "experience' are hard to evaluate. Concrete metrics — build time, error "
+            "rate, onboarding duration — give you a clear signal."
+        ),
+        (
+            "Teams that skip the evaluation phase almost always regret it. A one-week "
+            "spike on a real project reveals more than months of reading documentation. "
+            "The cost of a short experiment is trivial compared to the cost of a bad "
+            "long-term decision."
+        ),
+        (
+            "When presenting technical decisions to stakeholders, lead with business "
+            "impact rather than technical details. Reduced incident frequency, faster "
+            "time-to-market, and lower onboarding costs resonate more than benchmark "
+            "numbers or architectural diagrams."
+        ),
+        (
+            "Version-pin everything in your CI pipeline. Implicit 'latest' dependencies "
+            "are a reliable source of mysterious Monday-morning failures. Explicit "
+            "versions make builds reproducible and rollbacks straightforward."
+        ),
+        (
+            "Documentation is the most undervalued investment in software engineering. "
+            "A well-written Architecture Decision Record takes thirty minutes to write "
+            "and saves dozens of hours of confused re-discovery when the original "
+            "authors have moved on."
+        ),
+        (
+            "Automate the boring parts of your workflow ruthlessly. Every manual step "
+            "that a human performs is a step that will eventually be forgotten, done "
+            "inconsistently, or skipped under pressure. Scripts do not forget."
+        ),
+        (
+            "Observability is not optional. If you cannot see what your system is doing "
+            "in production, you are flying blind. Start with structured logging, add "
+            "metrics for the critical paths, and build dashboards that answer the "
+            "questions you actually ask during incidents."
+        ),
+        (
+            "Resist the temptation to adopt every new framework that appears on your "
+            "feed. Mature, well-understood tools with active communities are almost "
+            "always a better choice than bleeding-edge alternatives with thin "
+            "documentation and uncertain long-term support."
+        ),
+        (
+            "Code review is a teaching opportunity, not a gatekeeping ritual. The best "
+            "reviews explain why a change matters, suggest alternatives with context, "
+            "and leave the author better equipped to make similar decisions independently "
+            "in the future."
+        ),
+        (
+            "The fastest way to lose trust with your team is to ship a change nobody "
+            "was consulted about. Even small decisions benefit from a quick message in "
+            "the team channel. Technical correctness is necessary but not sufficient — "
+            "alignment and shared understanding matter just as much."
+        ),
+        (
+            "Treat your staging environment with the same respect as production. If "
+            "staging is permanently broken, nobody tests there, and production becomes "
+            "the first place real users encounter new code. A reliable staging environment "
+            "pays for itself many times over in prevented incidents."
+        ),
+    ]
+
+    def _pad_to_min_words(self, content: str) -> str:
+        """Add varied padding paragraphs until MIN_WORDS is reached.
+
+        Each paragraph is used at most once to prevent duplication.
+        """
+        idx = 0
+        while len(content.split()) < MIN_WORDS and idx < len(self._PADDING_POOL):
+            content += "\n\n" + self._PADDING_POOL[idx]
+            idx += 1
         return content
 
     # Known facts for tools we write about. Used to make comparison tables
@@ -204,11 +275,20 @@ class SimpleLocalLLM:
     }
 
     def _extract_tools(self, keyword: str):
-        """Parse 'Tool A vs Tool B: subtitle' → (tool_a, tool_b)."""
+        """Parse 'Tool A vs Tool B: subtitle' → (tool_a, tool_b).
+
+        Returns (tool_a, tool_b). If parsing fails to find two tools,
+        uses the full keyword as tool_a and a descriptive fallback for
+        tool_b to avoid publishing articles with placeholder text.
+        """
         base = re.split(r'[:(]', keyword)[0].strip()
         parts = re.split(r'\s+vs\.?\s+', base, maxsplit=1, flags=re.IGNORECASE)
-        tool_a = parts[0].strip() if parts else "Tool A"
-        tool_b = parts[1].strip() if len(parts) > 1 else "Tool B"
+        tool_a = parts[0].strip() if parts else keyword
+        tool_b = parts[1].strip() if len(parts) > 1 else ""
+        if not tool_b:
+            # Cannot determine second tool — use keyword itself so the
+            # article at least reads coherently instead of saying "Tool B".
+            tool_b = "alternatives"
         return tool_a, tool_b
 
     def _template_devtools_comparison(self, keyword: str, intent: str) -> str:
@@ -366,8 +446,22 @@ class SimpleLocalLLM:
         ]
         return self._pad_to_min_words("\n\n".join(sections))
 
+    def _extract_compatibility_components(self, keyword: str):
+        """Parse keyword into two component names for the version matrix."""
+        # Try splitting on common separators: "with", "and", "+", "/"
+        for sep in [" with ", " and ", " + ", " / "]:
+            if sep in keyword.lower():
+                idx = keyword.lower().index(sep)
+                a = keyword[:idx].strip()
+                b = keyword[idx + len(sep):].strip()
+                if a and b:
+                    return a, b
+        # Fallback: use the full keyword as the primary component
+        return keyword, "dependency"
+
     def _template_compatibility(self, keyword: str, intent: str) -> str:
         now = datetime.now().strftime("%B %Y")
+        comp_a, comp_b = self._extract_compatibility_components(keyword)
         sections = [
             textwrap.dedent(f"""
             # {keyword}
@@ -396,10 +490,10 @@ class SimpleLocalLLM:
             compatibility failures. Write them down before proceeding.
             """).strip(),
 
-            textwrap.dedent("""
+            textwrap.dedent(f"""
             ## Tested version matrix
 
-            | Component A version | Component B version | Status         | Notes                          |
+            | {comp_a} version    | {comp_b} version    | Status         | Notes                          |
             |---------------------|---------------------|----------------|--------------------------------|
             | Latest stable       | Latest stable       | OK             | Recommended combination        |
             | Latest stable       | Previous LTS        | OK             | Works with minor config change |

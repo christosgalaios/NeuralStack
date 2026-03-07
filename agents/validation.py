@@ -37,15 +37,45 @@ class ValidationAgent:
     def _word_count(self, content: str) -> int:
         return len(content.split())
 
+    _AI_PATTERN_PHRASES = [
+        "as an ai language model",
+        "in conclusion, in conclusion",
+        "lorem ipsum",
+        "in this comprehensive guide",
+        "it's worth noting that",
+        "it is important to note",
+        "without further ado",
+        "in today's rapidly evolving",
+        "dive deep into",
+        "delve into",
+    ]
+
+    _PLACEHOLDER_PATTERNS = [
+        "Tool B",
+        "Tool A",
+        "Component A version",
+        "Component B version",
+    ]
+
     def _looks_human_like(self, content: str) -> bool:
-        # Very simple heuristics: avoid extreme repetition of phrases.
         lower = content.lower()
-        repeated_phrases = [
-            "as an ai language model",
-            "in conclusion, in conclusion",
-            "lorem ipsum",
-        ]
-        return not any(p in lower for p in repeated_phrases)
+        return not any(p in lower for p in self._AI_PATTERN_PHRASES)
+
+    def _has_placeholder_text(self, content: str) -> bool:
+        """Detect unresolved template placeholders."""
+        return any(p in content for p in self._PLACEHOLDER_PATTERNS)
+
+    def _has_duplicated_paragraphs(self, content: str) -> bool:
+        """Detect paragraphs repeated 2+ times (the padding bug)."""
+        paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
+        seen = set()
+        for p in paragraphs:
+            # Normalise whitespace for comparison
+            normalised = " ".join(p.split())
+            if len(normalised) > 80 and normalised in seen:
+                return True
+            seen.add(normalised)
+        return False
 
     def _add_inline_citations(self, content: str) -> str:
         """
@@ -107,6 +137,12 @@ class ValidationAgent:
 
         if self._rejects_keyword_stuffing(draft.content, draft.title):
             reasons.append("potential keyword stuffing detected")
+
+        if self._has_placeholder_text(draft.content):
+            reasons.append("unresolved template placeholder detected")
+
+        if self._has_duplicated_paragraphs(draft.content):
+            reasons.append("duplicated paragraphs detected")
 
         approved = len(reasons) == 0
         return ValidationResult(draft=draft, approved=approved, reasons=reasons)
