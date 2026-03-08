@@ -2,31 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://christosgalaios.github.io/NeuralStack-Content/</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://christosgalaios.github.io/NeuralStack-Content/articles/best-ai-code-editors-in-2026-cursor-vs-copilot-vs-windsurf-ranked.html</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://christosgalaios.github.io/NeuralStack-Content/articles/cursor-ide-review-hands-on-for-professional-developers.html</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://christosgalaios.github.io/NeuralStack-Content/articles/cursor-ide-vs-github-copilot-which-ai-code-editor-wins-in-2026.html</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://christosgalaios.github.io/NeuralStack-Content/articles/cursor-ide-vs-vs-code-is-it-worth-switching-in-2026.html</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://christosgalaios.github.io/NeuralStack-Content/articles/cursor-ide-vs-windsurf-best-ai-code-editor-comparison.html</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://christosgalaios.github.io/NeuralStack-Content/articles/test.html</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://christosgalaios.github.io/NeuralStack-Content/articles/versioning-developer-documentation-in-static-site-hosts.html</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>

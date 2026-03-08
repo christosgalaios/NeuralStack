@@ -435,3 +435,31 @@
 2026-03-07 18:34:21,665 [INFO] Published TikTok script: remote developer jobs that pay six figures [text_story] (score=95)
 2026-03-07 18:34:21,665 [INFO] TikTok pipeline complete: 5 scripts published.
 2026-03-07 18:34:21,665 [INFO] Pipeline completed successfully.
+2026-03-08 04:41:54,960 [INFO] Starting DiscoveryAgent.
+2026-03-08 04:41:54,963 [INFO] Starting ContentAgent.
+2026-03-08 04:41:54,968 [INFO] Starting ValidationAgent.
+2026-03-08 04:41:54,971 [INFO] Starting DistributionAgent.
+2026-03-08 04:41:54,983 [INFO] Starting TikTokAgent.
+2026-03-08 04:41:54,984 [INFO] TikTok discovery found 5 new topics.
+2026-03-08 04:41:54,984 [INFO] Generated TikTok script via template: the mass layoffs in tech and how to survive
+2026-03-08 04:41:54,995 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-08 04:41:54,996 [WARNING] Video production failed for: the mass layoffs in tech and how to survive
+2026-03-08 04:41:54,996 [INFO] Published TikTok script: the mass layoffs in tech and how to survive [one_liner] (score=95)
+2026-03-08 04:41:54,996 [INFO] Generated TikTok script via template: Docker explained so simply your manager could understand
+2026-03-08 04:41:54,996 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-08 04:41:54,996 [WARNING] Video production failed for: Docker explained so simply your manager could understand
+2026-03-08 04:41:54,997 [INFO] Published TikTok script: Docker explained so simply your manager could understand [ratio_bait] (score=95)
+2026-03-08 04:41:54,997 [INFO] Generated TikTok script via template: how to use ChatGPT to code 10x faster
+2026-03-08 04:41:54,997 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-08 04:41:54,997 [WARNING] Video production failed for: how to use ChatGPT to code 10x faster
+2026-03-08 04:41:54,998 [INFO] Published TikTok script: how to use ChatGPT to code 10x faster [this_or_that] (score=95)
+2026-03-08 04:41:54,998 [INFO] Generated TikTok script via template: why senior devs hate unnecessary meetings
+2026-03-08 04:41:54,998 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-08 04:41:54,998 [WARNING] Video production failed for: why senior devs hate unnecessary meetings
+2026-03-08 04:41:54,998 [INFO] Published TikTok script: why senior devs hate unnecessary meetings [this_or_that] (score=95)
+2026-03-08 04:41:54,999 [INFO] Generated TikTok script via template: the mass layoffs in tech and what nobody tells you
+2026-03-08 04:41:54,999 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-08 04:41:54,999 [WARNING] Video production failed for: the mass layoffs in tech and what nobody tells you
+2026-03-08 04:41:54,999 [INFO] Published TikTok script: the mass layoffs in tech and what nobody tells you [one_liner] (score=95)
+2026-03-08 04:41:55,000 [INFO] TikTok pipeline complete: 5 scripts published.
+2026-03-08 04:41:55,000 [INFO] Pipeline completed successfully.

@@ -5288,5 +5288,295 @@
     "source": "heuristic-howto",
     "created_at": "2026-02-27T21:41:01.435369Z",
     "status": "new"
+  },
+  {
+    "id": "howto-use-cursor-ide-ai-features-to-write-code-3x-faster",
+    "keyword": "How to use Cursor IDE AI features to write code 3x faster (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-set-up-cursor-ide-for-a-python-project-from-scratch",
+    "keyword": "How to set up Cursor IDE for a Python project from scratch (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-migrate-from-vs-code-to-cursor-ide-without-losing-your-workf",
+    "keyword": "How to migrate from VS Code to Cursor IDE without losing your workflow (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-use-cursor-ide-composer-to-refactor-a-legacy-codebase",
+    "keyword": "How to use Cursor IDE Composer to refactor a legacy codebase (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-deploy-a-full-stack-app-to-railway-with-a-postgresql-databas",
+    "keyword": "How to deploy a full-stack app to Railway with a PostgreSQL database (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-set-up-railway-environment-variables-and-secrets-for-product",
+    "keyword": "How to set up Railway environment variables and secrets for production (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-migrate-a-node.js-app-from-heroku-to-railway-in-under-an-hou",
+    "keyword": "How to migrate a Node.js app from Heroku to Railway in under an hour (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-connect-a-custom-domain-to-a-railway-deployment",
+    "keyword": "How to connect a custom domain to a Railway deployment (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-set-up-datadog-apm-for-a-python-flask-application",
+    "keyword": "How to set up Datadog APM for a Python Flask application (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-create-datadog-dashboards-and-alerts-for-production-incident",
+    "keyword": "How to create Datadog dashboards and alerts for production incidents (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-use-datadog-logs-to-debug-a-microservices-architecture",
+    "keyword": "How to use Datadog Logs to debug a microservices architecture (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-set-up-datadog-synthetic-monitoring-for-an-api-endpoint",
+    "keyword": "How to set up Datadog synthetic monitoring for an API endpoint (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-integrate-datadog-with-pagerduty-for-on-call-alerting",
+    "keyword": "How to integrate Datadog with PagerDuty for on-call alerting (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "howto-reduce-datadog-costs-by-tuning-log-retention-and-sampling",
+    "keyword": "How to reduce Datadog costs by tuning log retention and sampling (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Follow a practical, step-by-step guide to accomplish a specific task.",
+    "difficulty_score": 0.3,
+    "source": "heuristic-howto",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "priority-cursor-vs-copilot",
+    "keyword": "Cursor IDE vs GitHub Copilot: which AI code editor wins in 2026",
+    "category": "devtools_comparison",
+    "intent": "Evaluate which AI editor to adopt.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "published"
+  },
+  {
+    "id": "priority-cursor-vs-vscode-2026",
+    "keyword": "Cursor IDE vs VS Code: is it worth switching in 2026",
+    "category": "devtools_comparison",
+    "intent": "Evaluate which editor to adopt.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "published"
+  },
+  {
+    "id": "priority-cursor-review",
+    "keyword": "Cursor IDE review: hands-on for professional developers",
+    "category": "devtools_comparison",
+    "intent": "Decide whether to adopt Cursor IDE.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "published"
+  },
+  {
+    "id": "priority-cursor-vs-windsurf",
+    "keyword": "Cursor IDE vs Windsurf: best AI code editor comparison",
+    "category": "devtools_comparison",
+    "intent": "Evaluate which AI editor to adopt.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "published"
+  },
+  {
+    "id": "priority-ai-editors-ranked-2026",
+    "keyword": "Best AI code editors in 2026: Cursor vs Copilot vs Windsurf ranked",
+    "category": "devtools_comparison",
+    "intent": "Choose the best AI editor.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "published"
+  },
+  {
+    "id": "priority-railway-vs-heroku",
+    "keyword": "Railway vs Heroku: the definitive platform comparison for 2026",
+    "category": "devtools_comparison",
+    "intent": "Decide which PaaS to use for deployment.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "priority-railway-vs-render-fly",
+    "keyword": "Railway vs Render vs Fly.io: cloud hosting comparison for developers",
+    "category": "devtools_comparison",
+    "intent": "Decide which hosting platform to use.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "priority-railway-review",
+    "keyword": "Railway review: best Heroku alternative for Python and Node apps",
+    "category": "devtools_comparison",
+    "intent": "Decide whether to migrate to Railway.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "priority-railway-python-deploy",
+    "keyword": "How to deploy a Python app to Railway from scratch (step-by-step guide)",
+    "category": "tutorial",
+    "intent": "Deploy a Python app to Railway.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "priority-railway-vs-vercel-netlify",
+    "keyword": "Railway vs Vercel vs Netlify: which platform for full-stack apps",
+    "category": "devtools_comparison",
+    "intent": "Choose the right deployment platform.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "priority-datadog-vs-prometheus",
+    "keyword": "Datadog vs Prometheus: which monitoring tool should you use in 2026",
+    "category": "devtools_comparison",
+    "intent": "Decide which monitoring tool to adopt.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "priority-datadog-vs-grafana",
+    "keyword": "Datadog vs Grafana Cloud: observability platform comparison",
+    "category": "devtools_comparison",
+    "intent": "Decide which observability platform to use.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "priority-datadog-review",
+    "keyword": "Datadog review: is it worth the cost for small engineering teams",
+    "category": "devtools_comparison",
+    "intent": "Decide whether to adopt Datadog.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "priority-datadog-nodejs-setup",
+    "keyword": "How to set up Datadog monitoring for a Node.js app (complete guide)",
+    "category": "tutorial",
+    "intent": "Set up Datadog for Node.js.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
+  },
+  {
+    "id": "priority-datadog-vs-newrelic-dynatrace",
+    "keyword": "Datadog vs New Relic vs Dynatrace: APM comparison for 2026",
+    "category": "devtools_comparison",
+    "intent": "Choose the right APM solution.",
+    "difficulty_score": 0.1,
+    "source": "heuristic-affiliate-priority",
+    "created_at": "2026-03-08T04:41:54.961453Z",
+    "status": "new"
   }
 ]
