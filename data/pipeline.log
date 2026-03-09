@@ -463,3 +463,31 @@
 2026-03-08 04:41:54,999 [INFO] Published TikTok script: the mass layoffs in tech and what nobody tells you [one_liner] (score=95)
 2026-03-08 04:41:55,000 [INFO] TikTok pipeline complete: 5 scripts published.
 2026-03-08 04:41:55,000 [INFO] Pipeline completed successfully.
+2026-03-09 04:50:07,298 [INFO] Starting DiscoveryAgent.
+2026-03-09 04:50:07,301 [INFO] Starting ContentAgent.
+2026-03-09 04:50:07,306 [INFO] Starting ValidationAgent.
+2026-03-09 04:50:07,309 [INFO] Starting DistributionAgent.
+2026-03-09 04:50:07,319 [INFO] Starting TikTokAgent.
+2026-03-09 04:50:07,319 [INFO] TikTok discovery found 5 new topics.
+2026-03-09 04:50:07,319 [INFO] Generated TikTok script via template: the AI tools replacing developers — should you worry
+2026-03-09 04:50:07,330 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-09 04:50:07,330 [WARNING] Video production failed for: the AI tools replacing developers — should you worry
+2026-03-09 04:50:07,330 [INFO] Published TikTok script: the AI tools replacing developers — should you worry [text_story] (score=95)
+2026-03-09 04:50:07,330 [INFO] Generated TikTok script via template: TypeScript tricks that feel illegal
+2026-03-09 04:50:07,331 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-09 04:50:07,331 [WARNING] Video production failed for: TypeScript tricks that feel illegal
+2026-03-09 04:50:07,331 [INFO] Published TikTok script: TypeScript tricks that feel illegal [text_story] (score=95)
+2026-03-09 04:50:07,331 [INFO] Generated TikTok script via template: AI coding assistants and whether they actually help
+2026-03-09 04:50:07,331 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-09 04:50:07,331 [WARNING] Video production failed for: AI coding assistants and whether they actually help
+2026-03-09 04:50:07,332 [INFO] Published TikTok script: AI coding assistants and whether they actually help [text_story] (score=95)
+2026-03-09 04:50:07,332 [INFO] Generated TikTok script via template: the easiest way hackers get into your accounts
+2026-03-09 04:50:07,332 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-09 04:50:07,332 [WARNING] Video production failed for: the easiest way hackers get into your accounts
+2026-03-09 04:50:07,332 [INFO] Published TikTok script: the easiest way hackers get into your accounts [text_story] (score=95)
+2026-03-09 04:50:07,332 [INFO] Generated TikTok script via template: developer salary negotiation secrets
+2026-03-09 04:50:07,333 [WARNING] Video production skipped — missing dependencies: ffmpeg, pillow
+2026-03-09 04:50:07,333 [WARNING] Video production failed for: developer salary negotiation secrets
+2026-03-09 04:50:07,333 [INFO] Published TikTok script: developer salary negotiation secrets [text_story] (score=100)
+2026-03-09 04:50:07,333 [INFO] TikTok pipeline complete: 5 scripts published.
+2026-03-09 04:50:07,333 [INFO] Pipeline completed successfully.
