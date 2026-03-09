@@ -18,7 +18,7 @@ _STOP_WORDS = frozenset({
 # Resolve base URL once at import time.
 BASE_URL = os.getenv(
     "NEURALSTACK_BASE_URL",
-    "https://christosgalaios.github.io/NeuralStack-Content",
+        "https://neuralstackhello.co.uk",
 )
 
 # Optional: set NEURALSTACK_ADSENSE_ID to inject AdSense auto-ads.
