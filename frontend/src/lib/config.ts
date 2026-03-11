@@ -38,8 +38,7 @@ export const AFFILIATES = [
 ];
 
 export const AFFILIATE_RELEVANCE: Record<string, string[]> = {
-  "Cursor IDE": ["code-editor", "ai-coding", "ide", "developer-tools", "copilot", "vscode", "cursor", "ai editor"],
-  "Datadog": ["monitoring", "observability", "logging", "debugging", "apm", "production", "datadog", "grafana"],
+  "Vultr": ["cloud", "vps", "server", "hosting", "gpu", "bare-metal", "compute", "infrastructure", "vultr", "deploy", "linux"],
   "Railway": ["deployment", "hosting", "cloud", "ci-cd", "infrastructure", "paas", "railway", "heroku", "render"],
 };
 
