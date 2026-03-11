@@ -164,9 +164,33 @@
       "generated_articles": 5,
       "published_articles": 1,
       "errors": []
+    },
+    {
+      "timestamp": "2026-03-11T18:52:24.471089Z",
+      "status": "success",
+      "generated_topics": 5,
+      "generated_articles": 5,
+      "published_articles": 0,
+      "errors": []
+    },
+    {
+      "timestamp": "2026-03-11T19:25:28.618443Z",
+      "status": "success",
+      "generated_topics": 5,
+      "generated_articles": 5,
+      "published_articles": 2,
+      "errors": []
+    },
+    {
+      "timestamp": "2026-03-11T20:04:58.777201Z",
+      "status": "success",
+      "generated_topics": 5,
+      "generated_articles": 5,
+      "published_articles": 5,
+      "errors": []
     }
   ],
-  "articles_published": 86,
-  "last_run": "2026-03-11T18:14:35.317868Z",
+  "articles_published": 93,
+  "last_run": "2026-03-11T20:04:58.777201Z",
   "errors": []
 }
