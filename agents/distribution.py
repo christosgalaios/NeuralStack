@@ -30,16 +30,13 @@ GOOGLE_VERIFICATION = os.getenv(
 )
 
 # Affiliate configuration
-AFF1_NAME = os.getenv("NEURALSTACK_AFF1_NAME", "Cursor IDE")
-AFF1_URL = os.getenv("NEURALSTACK_AFF1_URL", "https://www.cursor.com")
-AFF2_NAME = os.getenv("NEURALSTACK_AFF2_NAME", "Datadog")
-AFF2_URL = os.getenv("NEURALSTACK_AFF2_URL", "https://www.datadoghq.com")
-AFF3_NAME = os.getenv("NEURALSTACK_AFF3_NAME", "Railway")
-AFF3_URL = os.getenv("NEURALSTACK_AFF3_URL", "https://railway.app?referralCode=2zaRHx")
+AFF1_NAME = os.getenv("NEURALSTACK_AFF1_NAME", "DigitalOcean")
+AFF1_URL = os.getenv("NEURALSTACK_AFF1_URL", "https://www.digitalocean.com")
+AFF2_NAME = os.getenv("NEURALSTACK_AFF2_NAME", "Railway")
+AFF2_URL = os.getenv("NEURALSTACK_AFF2_URL", "https://railway.app?referralCode=2zaRHx")
 
 _TOOL_DESCRIPTIONS = {
-    "Cursor IDE": "AI-first code editor that accelerates your workflow with intelligent completions and inline chat.",
-    "Datadog": "Full-stack observability platform for monitoring your cloud infrastructure and applications.",
+    "DigitalOcean": "Simple, predictable cloud hosting with $200 free credit \u2014 deploy apps, databases, and Kubernetes in seconds.",
     "Railway": "Deploy code from GitHub in seconds \u2014 simple, powerful cloud hosting for developers.",
 }
 
@@ -253,7 +250,6 @@ def _tool_callout_html(slug: str) -> str:
     affiliates = [
         (AFF1_NAME, AFF1_URL),
         (AFF2_NAME, AFF2_URL),
-        (AFF3_NAME, AFF3_URL),
     ]
     idx = abs(hash(slug)) % len(affiliates)
     name, url = affiliates[idx]
@@ -275,7 +271,6 @@ def _tools_section_html() -> str:
     affiliates = [
         (AFF1_NAME, AFF1_URL),
         (AFF2_NAME, AFF2_URL),
-        (AFF3_NAME, AFF3_URL),
     ]
     cards: List[str] = []
     for name, url in affiliates:
@@ -845,7 +840,6 @@ class DistributionAgent:
         affiliates = [
             (AFF1_NAME, AFF1_URL),
             (AFF2_NAME, AFF2_URL),
-            (AFF3_NAME, AFF3_URL),
         ]
         idx = abs(hash(draft.slug)) % len(affiliates)
         aff_name, aff_url = affiliates[idx]
