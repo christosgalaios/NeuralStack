@@ -70,6 +70,36 @@
     ]
   },
   {
+    "slug": "docker-on-apple-silicon-m3-compatibility-guide",
+    "title": "Docker on Apple Silicon M3 compatibility guide",
+    "description": "Docker on Apple Silicon M3 compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-11",
+    "reading_time_minutes": 5,
+    "tags": [
+      "apple",
+      "compatibility",
+      "docker",
+      "silicon"
+    ]
+  },
+  {
+    "slug": "docker-on-windows-11-arm-compatibility-guide",
+    "title": "Docker on Windows 11 ARM compatibility guide",
+    "description": "Docker on Windows 11 ARM compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-11",
+    "reading_time_minutes": 5,
+    "tags": [
+      "arm",
+      "compatibility",
+      "docker",
+      "windows"
+    ]
+  },
+  {
     "slug": "docker-on-windows-11-arm-detailed-compatibility-guide",
     "title": "Docker on Windows 11 ARM detailed compatibility guide",
     "description": "Docker on Windows 11 ARM detailed compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
@@ -82,6 +112,52 @@
       "compatibility",
       "docker",
       "windows"
+    ]
+  },
+  {
+    "slug": "docker-with-cuda-12-4-compatibility-guide",
+    "title": "Docker with CUDA 12.4 compatibility guide",
+    "description": "Docker with CUDA 12.4 compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-11",
+    "reading_time_minutes": 5,
+    "tags": [
+      "compatibility",
+      "cuda",
+      "docker"
+    ]
+  },
+  {
+    "slug": "docker-with-rocm-on-amd-gpus-compatibility-guide",
+    "title": "Docker with ROCm on AMD GPUs compatibility guide",
+    "description": "Docker with ROCm on AMD GPUs compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-11",
+    "reading_time_minutes": 5,
+    "tags": [
+      "amd",
+      "compatibility",
+      "docker",
+      "gpus",
+      "rocm"
+    ]
+  },
+  {
+    "slug": "docker-with-wsl2-gpu-passthrough-compatibility-guide",
+    "title": "Docker with WSL2 GPU passthrough compatibility guide",
+    "description": "Docker with WSL2 GPU passthrough compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-11",
+    "reading_time_minutes": 5,
+    "tags": [
+      "compatibility",
+      "docker",
+      "gpu",
+      "passthrough",
+      "wsl2"
     ]
   },
   {
