@@ -62,6 +62,10 @@ export function getAllTags(): string[] {
   return [...tags].sort();
 }
 
+export function getArticlesByTag(tag: string): ArticleMeta[] {
+  return getAllArticles().filter((a) => a.tags?.includes(tag));
+}
+
 export function getRelatedArticles(slugs: string[]): ArticleMeta[] {
   const all = getAllArticles();
   return slugs

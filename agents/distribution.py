@@ -392,11 +392,31 @@ class DistributionAgent:
             draft.slug, draft.title, self.articles_dir, BASE_URL
         )
 
+        cat_name, cat_class = _infer_category(draft.title)
+
         canonical = f"{BASE_URL}/articles/{filename}"
-        description = (
-            f"In-depth technical guide: {draft.title}. Practical trade-offs, "
-            f"implementation patterns, and recommendations for production engineers."
-        )
+        # AI-optimized description: category-specific for snippet extraction
+        cat_name_lower = cat_name.lower()
+        if cat_class == "comparison":
+            description = (
+                f"{draft.title}. Side-by-side {cat_name_lower} covering pricing, "
+                f"features, performance, and real-world trade-offs for production engineers."
+            )
+        elif cat_class == "review":
+            description = (
+                f"{draft.title}. Hands-on {cat_name_lower} with benchmarks, "
+                f"pricing analysis, and honest recommendations for professional developers."
+            )
+        elif cat_class == "tutorial":
+            description = (
+                f"{draft.title}. Step-by-step {cat_name_lower} with code examples, "
+                f"configuration snippets, and deployment patterns."
+            )
+        else:
+            description = (
+                f"{draft.title}. Practical {cat_name_lower} covering implementation "
+                f"patterns, trade-offs, and recommendations for production engineers."
+            )
 
         adsense_tag = ""
         if ADSENSE_ID:
@@ -426,8 +446,6 @@ class DistributionAgent:
 
         word_count = len(body.split())
         reading_min = max(1, round(word_count / 220))
-
-        cat_name, cat_class = _infer_category(draft.title)
 
         tool_callout = _tool_callout_html(draft.slug)
 
@@ -737,8 +755,11 @@ class DistributionAgent:
     def _extract_faq(self, html_body: str) -> List[Dict]:
         """Extract FAQ question/answer pairs from article HTML."""
         faq_items: List[Dict] = []
-        # Look for FAQ section: find h2 containing "FAQ" then collect subsequent content
-        parts = re.split(r'<h2[^>]*>.*?FAQ.*?</h2>', html_body, flags=re.IGNORECASE)
+        # Look for FAQ section: find h2 containing "FAQ" or "frequently"
+        parts = re.split(
+            r'<h2[^>]*>.*?(?:FAQ|frequently\s+asked).*?</h2>',
+            html_body, flags=re.IGNORECASE,
+        )
         if len(parts) < 2:
             return faq_items
         faq_section = parts[1]
@@ -746,13 +767,24 @@ class DistributionAgent:
         next_h2 = re.search(r'<h2', faq_section)
         if next_h2:
             faq_section = faq_section[:next_h2.start()]
-        # Extract bold questions followed by paragraph answers
-        pattern = r'<strong>([^<]+\?)\s*</strong>\s*(.+?)(?=<strong>|<h[23]|$)'
-        for m in re.finditer(pattern, faq_section, re.DOTALL):
-            answer = _strip_tags(m.group(2)).strip()
-            if answer:
-                faq_items.append({"question": m.group(1).strip(), "answer": answer})
-        # Also try <p> based patterns: Q as a line, A as next paragraph
+
+        # Strategy 1: H3 questions followed by paragraph answers
+        h3_pattern = r'<h3[^>]*>(.*?)</h3>\s*<p>(.*?)</p>'
+        for m in re.finditer(h3_pattern, faq_section, re.DOTALL):
+            q_text = _strip_tags(m.group(1)).strip()
+            a_text = _strip_tags(m.group(2)).strip()
+            if q_text and a_text:
+                faq_items.append({"question": q_text, "answer": a_text})
+
+        # Strategy 2: Bold questions followed by text
+        if not faq_items:
+            bold_pattern = r'<strong>([^<]+\?)\s*</strong>\s*(.+?)(?=<strong>|<h[23]|$)'
+            for m in re.finditer(bold_pattern, faq_section, re.DOTALL):
+                answer = _strip_tags(m.group(2)).strip()
+                if answer:
+                    faq_items.append({"question": m.group(1).strip(), "answer": answer})
+
+        # Strategy 3: Paragraph-based Q&A (question ending with ?)
         if not faq_items:
             paragraphs = re.findall(r'<p>(.*?)</p>', faq_section, re.DOTALL)
             i = 0
@@ -824,10 +856,28 @@ class DistributionAgent:
         reading_min = max(1, round(word_count / 220))
         date_published = draft.created_at[:10]
         date_modified = datetime.now(timezone.utc).date().isoformat()
-        description = (
-            f"In-depth technical guide: {draft.title}. Practical trade-offs, "
-            f"implementation patterns, and recommendations for production engineers."
-        )
+        # AI-optimized description: direct answer format for snippet extraction
+        cat_name_lower = cat_name.lower()
+        if cat_class == "comparison":
+            description = (
+                f"{draft.title}. Side-by-side {cat_name_lower} covering pricing, "
+                f"features, performance, and real-world trade-offs for production engineers."
+            )
+        elif cat_class == "review":
+            description = (
+                f"{draft.title}. Hands-on {cat_name_lower} with benchmarks, "
+                f"pricing analysis, and honest recommendations for professional developers."
+            )
+        elif cat_class == "tutorial":
+            description = (
+                f"{draft.title}. Step-by-step {cat_name_lower} with code examples, "
+                f"configuration snippets, and deployment patterns."
+            )
+        else:
+            description = (
+                f"{draft.title}. Practical {cat_name_lower} covering implementation "
+                f"patterns, trade-offs, and recommendations for production engineers."
+            )
 
         faq_items = self._extract_faq(body_with_ids)
         tags = self._extract_tags(draft.title, cat_class)

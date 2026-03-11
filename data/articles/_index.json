@@ -1,92 +1,8 @@
 [
   {
-    "slug": "datadog-review-is-it-worth-the-cost-for-small-engineering-teams",
-    "title": "Datadog review: is it worth the cost for small engineering teams",
-    "description": "In-depth technical guide: Datadog review: is it worth the cost for small engineering teams. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
-    "category": "review",
-    "category_display": "Review",
-    "date_published": "2026-03-11",
-    "reading_time_minutes": 5,
-    "tags": [
-      "cost",
-      "datadog",
-      "engineering",
-      "review",
-      "small",
-      "teams",
-      "worth"
-    ]
-  },
-  {
-    "slug": "datadog-vs-grafana-cloud-observability-platform-comparison",
-    "title": "Datadog vs Grafana Cloud: observability platform comparison",
-    "description": "In-depth technical guide: Datadog vs Grafana Cloud: observability platform comparison. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
-    "category": "comparison",
-    "category_display": "Comparison",
-    "date_published": "2026-03-11",
-    "reading_time_minutes": 5,
-    "tags": [
-      "cloud",
-      "comparison",
-      "datadog",
-      "grafana",
-      "observability",
-      "platform"
-    ]
-  },
-  {
-    "slug": "datadog-vs-new-relic-vs-dynatrace-apm-comparison-for-2026",
-    "title": "Datadog vs New Relic vs Dynatrace: APM comparison for 2026",
-    "description": "In-depth technical guide: Datadog vs New Relic vs Dynatrace: APM comparison for 2026. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
-    "category": "comparison",
-    "category_display": "Comparison",
-    "date_published": "2026-03-11",
-    "reading_time_minutes": 5,
-    "tags": [
-      "2026",
-      "apm",
-      "comparison",
-      "datadog",
-      "dynatrace",
-      "new",
-      "relic"
-    ]
-  },
-  {
-    "slug": "datadog-vs-prometheus-which-monitoring-tool-should-you-use-in-2026",
-    "title": "Datadog vs Prometheus: which monitoring tool should you use in 2026",
-    "description": "In-depth technical guide: Datadog vs Prometheus: which monitoring tool should you use in 2026. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
-    "category": "comparison",
-    "category_display": "Comparison",
-    "date_published": "2026-03-11",
-    "reading_time_minutes": 5,
-    "tags": [
-      "2026",
-      "comparison",
-      "datadog",
-      "monitoring",
-      "prometheus",
-      "tool"
-    ]
-  },
-  {
-    "slug": "test",
-    "title": "Test Article",
-    "description": "In-depth technical guide: Test Article. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
-    "category": "guide",
-    "category_display": "Guide",
-    "date_published": "2026-03-10",
-    "reading_time_minutes": 1,
-    "tags": [
-      "article",
-      "guide",
-      "test"
-    ]
-  },
-  {
     "slug": "railway-review-best-heroku-alternative-for-python-and-node-apps",
     "title": "Railway review: best Heroku alternative for Python and Node apps",
-    "description": "In-depth technical guide: Railway review: best Heroku alternative for Python and Node apps. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
+    "description": "Railway review: best Heroku alternative for Python and Node apps. Hands-on review with benchmarks, pricing analysis, and honest recommendations for professional developers.",
     "category": "review",
     "category_display": "Review",
     "date_published": "2026-03-09",
@@ -104,7 +20,7 @@
   {
     "slug": "railway-vs-heroku-the-definitive-platform-comparison-for-2026",
     "title": "Railway vs Heroku: the definitive platform comparison for 2026",
-    "description": "In-depth technical guide: Railway vs Heroku: the definitive platform comparison for 2026. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
+    "description": "Railway vs Heroku: the definitive platform comparison for 2026. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
     "category": "comparison",
     "category_display": "Comparison",
     "date_published": "2026-03-09",
@@ -121,7 +37,7 @@
   {
     "slug": "railway-vs-render-vs-fly-io-cloud-hosting-comparison-for-developers",
     "title": "Railway vs Render vs Fly.io: cloud hosting comparison for developers",
-    "description": "In-depth technical guide: Railway vs Render vs Fly.io: cloud hosting comparison for developers. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
+    "description": "Railway vs Render vs Fly.io: cloud hosting comparison for developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
     "category": "comparison",
     "category_display": "Comparison",
     "date_published": "2026-03-09",
@@ -139,7 +55,7 @@
   {
     "slug": "railway-vs-vercel-vs-netlify-which-platform-for-full-stack-apps",
     "title": "Railway vs Vercel vs Netlify: which platform for full-stack apps",
-    "description": "In-depth technical guide: Railway vs Vercel vs Netlify: which platform for full-stack apps. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
+    "description": "Railway vs Vercel vs Netlify: which platform for full-stack apps. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
     "category": "comparison",
     "category_display": "Comparison",
     "date_published": "2026-03-09",
@@ -158,7 +74,7 @@
   {
     "slug": "best-ai-code-editors-in-2026-cursor-vs-copilot-vs-windsurf-ranked",
     "title": "Best AI code editors in 2026: Cursor vs Copilot vs Windsurf ranked",
-    "description": "In-depth technical guide: Best AI code editors in 2026: Cursor vs Copilot vs Windsurf ranked. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
+    "description": "Best AI code editors in 2026: Cursor vs Copilot vs Windsurf ranked. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
     "category": "comparison",
     "category_display": "Comparison",
     "date_published": "2026-03-08",
@@ -177,7 +93,7 @@
   {
     "slug": "cursor-ide-review-hands-on-for-professional-developers",
     "title": "Cursor IDE review: hands-on for professional developers",
-    "description": "In-depth technical guide: Cursor IDE review: hands-on for professional developers. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
+    "description": "Cursor IDE review: hands-on for professional developers. Hands-on review with benchmarks, pricing analysis, and honest recommendations for professional developers.",
     "category": "review",
     "category_display": "Review",
     "date_published": "2026-03-08",
@@ -194,7 +110,7 @@
   {
     "slug": "cursor-ide-vs-github-copilot-which-ai-code-editor-wins-in-2026",
     "title": "Cursor IDE vs GitHub Copilot: which AI code editor wins in 2026",
-    "description": "In-depth technical guide: Cursor IDE vs GitHub Copilot: which AI code editor wins in 2026. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
+    "description": "Cursor IDE vs GitHub Copilot: which AI code editor wins in 2026. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
     "category": "comparison",
     "category_display": "Comparison",
     "date_published": "2026-03-08",
@@ -214,7 +130,7 @@
   {
     "slug": "cursor-ide-vs-vs-code-is-it-worth-switching-in-2026",
     "title": "Cursor IDE vs VS Code: is it worth switching in 2026",
-    "description": "In-depth technical guide: Cursor IDE vs VS Code: is it worth switching in 2026. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
+    "description": "Cursor IDE vs VS Code: is it worth switching in 2026. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
     "category": "comparison",
     "category_display": "Comparison",
     "date_published": "2026-03-08",
@@ -232,7 +148,7 @@
   {
     "slug": "cursor-ide-vs-windsurf-best-ai-code-editor-comparison",
     "title": "Cursor IDE vs Windsurf: best AI code editor comparison",
-    "description": "In-depth technical guide: Cursor IDE vs Windsurf: best AI code editor comparison. Practical trade-offs, implementation patterns, and recommendations for production engineers.",
+    "description": "Cursor IDE vs Windsurf: best AI code editor comparison. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
     "category": "comparison",
     "category_display": "Comparison",
     "date_published": "2026-03-08",
@@ -249,7 +165,7 @@
   {
     "slug": "versioning-developer-documentation-in-static-site-hosts",
     "title": "Versioning Developer Documentation in Static Site Hosts: Strategies for Automated Deployment and Routing",
-    "description": "A technical guide to implementing version-controlled documentation workflows for static site hosts using URL routing and build automation.",
+    "description": "Versioning Developer Documentation in Static Site Hosts: Strategies for Automated Deployment and Routing. Practical guide covering implementation patterns, trade-offs, and recommendations for production engineers.",
     "category": "guide",
     "category_display": "Guide",
     "date_published": "2026-03-07",

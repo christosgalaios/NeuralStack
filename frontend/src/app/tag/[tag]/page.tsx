@@ -1,46 +1,49 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getAllCategories, getArticlesByCategory } from "@/lib/articles";
-import { SITE_NAME, BASE_URL, CATEGORY_META } from "@/lib/config";
+import { getAllTags, getArticlesByTag } from "@/lib/articles";
+import { SITE_NAME, BASE_URL } from "@/lib/config";
 import ArticleCard from "@/components/cards/ArticleCard";
 import AdSlot from "@/components/monetization/AdSlot";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  return getAllCategories().map((cat) => ({ cat }));
+  return getAllTags().map((tag) => ({ tag }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ cat: string }>;
+  params: Promise<{ tag: string }>;
 }): Promise<Metadata> {
-  const { cat } = await params;
-  const meta = CATEGORY_META[cat];
-  if (!meta) return {};
+  const { tag } = await params;
+  const articles = getArticlesByTag(tag);
+  if (articles.length === 0) return {};
+
+  const display = tag.charAt(0).toUpperCase() + tag.slice(1);
+  const description = `Browse ${articles.length} article${articles.length !== 1 ? "s" : ""} tagged "${display}" on ${SITE_NAME}.`;
 
   return {
-    title: `${meta.display} Articles`,
-    description: meta.description,
+    title: `${display} Articles`,
+    description,
     openGraph: {
-      title: `${meta.display} Articles | ${SITE_NAME}`,
-      description: meta.description,
-      url: `${BASE_URL}/category/${cat}`,
+      title: `${display} Articles | ${SITE_NAME}`,
+      description,
+      url: `${BASE_URL}/tag/${tag}`,
     },
-    alternates: { canonical: `${BASE_URL}/category/${cat}` },
+    alternates: { canonical: `${BASE_URL}/tag/${tag}` },
   };
 }
 
-export default async function CategoryPage({
+export default async function TagPage({
   params,
 }: {
-  params: Promise<{ cat: string }>;
+  params: Promise<{ tag: string }>;
 }) {
-  const { cat } = await params;
-  const meta = CATEGORY_META[cat];
-  if (!meta) notFound();
+  const { tag } = await params;
+  const articles = getArticlesByTag(tag);
+  if (articles.length === 0) notFound();
 
-  const articles = getArticlesByCategory(cat);
+  const display = tag.charAt(0).toUpperCase() + tag.slice(1);
 
   return (
     <div className="animate-in">
@@ -48,16 +51,18 @@ export default async function CategoryPage({
       <nav className="mb-6 flex items-center gap-2 text-sm" style={{ color: "var(--text-muted)" }}>
         <Link href="/" className="transition-colors hover:opacity-80" style={{ color: "var(--accent)" }}>Home</Link>
         <span>/</span>
-        <span style={{ color: "var(--text-secondary)" }}>{meta.display}</span>
+        <span style={{ color: "var(--text-secondary)" }}>Tags</span>
+        <span>/</span>
+        <span style={{ color: "var(--text-secondary)" }}>{display}</span>
       </nav>
 
       {/* Hero */}
       <header className="mb-8">
         <h1 className="text-2xl font-extrabold sm:text-3xl" style={{ color: "var(--text-primary)" }}>
-          {meta.display}
+          {display}
         </h1>
         <p className="mt-2" style={{ color: "var(--text-secondary)" }}>
-          {meta.description}
+          Articles tagged with &ldquo;{display}&rdquo;
         </p>
         <p className="mt-1 text-sm" style={{ color: "var(--text-muted)" }}>
           {articles.length} article{articles.length !== 1 ? "s" : ""}
@@ -74,7 +79,7 @@ export default async function CategoryPage({
 
       {articles.length === 0 && (
         <p className="py-16 text-center" style={{ color: "var(--text-muted)" }}>
-          No articles in this category yet.
+          No articles with this tag yet.
         </p>
       )}
 
@@ -88,9 +93,9 @@ export default async function CategoryPage({
             {
               "@context": "https://schema.org",
               "@type": "CollectionPage",
-              name: `${meta.display} Articles`,
-              description: meta.description,
-              url: `${BASE_URL}/category/${cat}`,
+              name: `${display} Articles`,
+              description: `Articles tagged with "${display}" on ${SITE_NAME}.`,
+              url: `${BASE_URL}/tag/${tag}`,
               numberOfItems: articles.length,
             },
             {
@@ -98,7 +103,8 @@ export default async function CategoryPage({
               "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
-                { "@type": "ListItem", position: 2, name: meta.display },
+                { "@type": "ListItem", position: 2, name: "Tags" },
+                { "@type": "ListItem", position: 3, name: display },
               ],
             },
           ]),

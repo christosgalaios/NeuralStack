@@ -1,5 +1,5 @@
 import { getAllArticles, getAllCategories } from "@/lib/articles";
-import { SITE_NAME, SITE_TAGLINE, AFFILIATES, CATEGORY_META } from "@/lib/config";
+import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, BASE_URL, AFFILIATES, CATEGORY_META } from "@/lib/config";
 import ArticleCard from "@/components/cards/ArticleCard";
 import ToolCard from "@/components/cards/ToolCard";
 import AdSlot from "@/components/monetization/AdSlot";
@@ -119,6 +119,44 @@ export default function HomePage() {
       )}
 
       <AdSlot position="footer" className="mt-8" />
+
+      {/* Homepage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: SITE_NAME,
+              url: BASE_URL,
+              description: SITE_DESCRIPTION,
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${BASE_URL}/?q={search_term_string}`,
+                "query-input": "required name=search_term_string",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: SITE_NAME,
+              url: BASE_URL,
+              description: SITE_DESCRIPTION,
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              itemListElement: articles.slice(0, 10).map((a, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                url: `${BASE_URL}/articles/${a.slug}`,
+                name: a.title,
+              })),
+            },
+          ]),
+        }}
+      />
     </div>
   );
 }
