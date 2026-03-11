@@ -189,6 +189,25 @@
     ]
   },
   {
+    "slug": "railway-vs-vultr-paas-vs-iaas-for-web-app-deployment",
+    "title": "Railway vs Vultr: PaaS vs IaaS for web app deployment",
+    "description": "Railway vs Vultr: PaaS vs IaaS for web app deployment. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-03-11",
+    "reading_time_minutes": 6,
+    "tags": [
+      "app",
+      "comparison",
+      "deployment",
+      "iaas",
+      "paas",
+      "railway",
+      "vultr",
+      "web"
+    ]
+  },
+  {
     "slug": "tensorrt-with-onnx-detailed-compatibility-guide",
     "title": "TensorRT with ONNX detailed compatibility guide",
     "description": "TensorRT with ONNX detailed compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
@@ -233,6 +252,24 @@
       "comparison",
       "developers",
       "digitalocean",
+      "hosting",
+      "vultr"
+    ]
+  },
+  {
+    "slug": "vultr-vs-hetzner-budget-cloud-hosting-comparison-for-2026",
+    "title": "Vultr vs Hetzner: budget cloud hosting comparison for 2026",
+    "description": "Vultr vs Hetzner: budget cloud hosting comparison for 2026. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-03-11",
+    "reading_time_minutes": 6,
+    "tags": [
+      "2026",
+      "budget",
+      "cloud",
+      "comparison",
+      "hetzner",
       "hosting",
       "vultr"
     ]
