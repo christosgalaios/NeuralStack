@@ -27,7 +27,7 @@ AFFILIATE_SLOTS = [
     },
     {
         "name": os.getenv("NEURALSTACK_AFF3_NAME", "Railway"),
-        "url": os.getenv("NEURALSTACK_AFF3_URL", "https://railway.app"),
+        "url": os.getenv("NEURALSTACK_AFF3_URL", "https://railway.app?referralCode=2zaRHx"),
         "desc": "deploy from a GitHub repo in seconds with built-in CI, databases, and cron — pay only for what you use",
     },
 ]

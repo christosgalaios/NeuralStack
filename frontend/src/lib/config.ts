@@ -30,7 +30,7 @@ export const AFFILIATES = [
   },
   {
     name: process.env.NEXT_PUBLIC_AFF3_NAME || "Railway",
-    url: process.env.NEXT_PUBLIC_AFF3_URL || "https://railway.app",
+    url: process.env.NEXT_PUBLIC_AFF3_URL || "https://railway.app?referralCode=2zaRHx",
     description:
       "Deploy code from GitHub in seconds — simple, powerful cloud hosting for developers.",
     tagline: "Ship faster, scale easier",

@@ -35,7 +35,7 @@ AFF1_URL = os.getenv("NEURALSTACK_AFF1_URL", "https://www.cursor.com")
 AFF2_NAME = os.getenv("NEURALSTACK_AFF2_NAME", "Datadog")
 AFF2_URL = os.getenv("NEURALSTACK_AFF2_URL", "https://www.datadoghq.com")
 AFF3_NAME = os.getenv("NEURALSTACK_AFF3_NAME", "Railway")
-AFF3_URL = os.getenv("NEURALSTACK_AFF3_URL", "https://railway.app")
+AFF3_URL = os.getenv("NEURALSTACK_AFF3_URL", "https://railway.app?referralCode=2zaRHx")
 
 _TOOL_DESCRIPTIONS = {
     "Cursor IDE": "AI-first code editor that accelerates your workflow with intelligent completions and inline chat.",
