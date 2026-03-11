@@ -392,11 +392,31 @@ class DistributionAgent:
             draft.slug, draft.title, self.articles_dir, BASE_URL
         )
 
+        cat_name, cat_class = _infer_category(draft.title)
+
         canonical = f"{BASE_URL}/articles/{filename}"
-        description = (
-            f"In-depth technical guide: {draft.title}. Practical trade-offs, "
-            f"implementation patterns, and recommendations for production engineers."
-        )
+        # AI-optimized description: category-specific for snippet extraction
+        cat_name_lower = cat_name.lower()
+        if cat_class == "comparison":
+            description = (
+                f"{draft.title}. Side-by-side {cat_name_lower} covering pricing, "
+                f"features, performance, and real-world trade-offs for production engineers."
+            )
+        elif cat_class == "review":
+            description = (
+                f"{draft.title}. Hands-on {cat_name_lower} with benchmarks, "
+                f"pricing analysis, and honest recommendations for professional developers."
+            )
+        elif cat_class == "tutorial":
+            description = (
+                f"{draft.title}. Step-by-step {cat_name_lower} with code examples, "
+                f"configuration snippets, and deployment patterns."
+            )
+        else:
+            description = (
+                f"{draft.title}. Practical {cat_name_lower} covering implementation "
+                f"patterns, trade-offs, and recommendations for production engineers."
+            )
 
         adsense_tag = ""
         if ADSENSE_ID:
@@ -426,8 +446,6 @@ class DistributionAgent:
 
         word_count = len(body.split())
         reading_min = max(1, round(word_count / 220))
-
-        cat_name, cat_class = _infer_category(draft.title)
 
         tool_callout = _tool_callout_html(draft.slug)
 
