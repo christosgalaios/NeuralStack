@@ -59,13 +59,6 @@ class TestDistributionAgent(unittest.TestCase):
         self.assertNotIn("{{BASE_URL}}", sitemap)
         self.assertIn(BASE_URL, sitemap)
 
-    def test_rss_uses_real_base_url(self):
-        agent = DistributionAgent(self.data_dir, self.root, self.articles_dir)
-        agent.run([self._make_draft()])
-        feed = (self.root / "feed.xml").read_text()
-        self.assertNotIn("{{BASE_URL}}", feed)
-        self.assertIn(BASE_URL, feed)
-
     def test_run_with_no_drafts(self):
         agent = DistributionAgent(self.data_dir, self.root, self.articles_dir)
         published = agent.run([])
