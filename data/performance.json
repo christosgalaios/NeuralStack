@@ -124,9 +124,17 @@
       "published_articles": 4,
       "errors": [],
       "tiktok_scripts_published": 5
+    },
+    {
+      "timestamp": "2026-03-11T04:49:53.500347Z",
+      "status": "success",
+      "generated_topics": 5,
+      "generated_articles": 5,
+      "published_articles": 4,
+      "errors": []
     }
   ],
-  "articles_published": 69,
-  "last_run": "2026-03-09T04:50:07.298211Z",
+  "articles_published": 73,
+  "last_run": "2026-03-11T04:49:53.500347Z",
   "errors": []
 }
