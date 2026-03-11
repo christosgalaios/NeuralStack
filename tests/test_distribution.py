@@ -233,6 +233,34 @@ class TestJsonExport(unittest.TestCase):
         self.assertIn("copilot", tags)
         self.assertIn("comparison", tags)
 
+    def test_extract_faq_from_h3_pattern(self):
+        """FAQ extraction handles H3-based questions (most common pattern)."""
+        agent = DistributionAgent(self.data_dir, self.root, self.articles_dir)
+        html = (
+            '<h2 id="faq">Frequently asked questions</h2>'
+            '<h3>Which tool is better for startups?</h3>'
+            '<p>Startups should choose based on team size and budget.</p>'
+            '<h3>Can I use both tools together?</h3>'
+            '<p>Yes, but be deliberate about the migration window.</p>'
+            '<h2 id="conclusion">Conclusion</h2>'
+        )
+        faq = agent._extract_faq(html)
+        self.assertEqual(len(faq), 2)
+        self.assertEqual(faq[0]["question"], "Which tool is better for startups?")
+        self.assertIn("team size", faq[0]["answer"])
+        self.assertEqual(faq[1]["question"], "Can I use both tools together?")
+
+    def test_extract_faq_from_bold_pattern(self):
+        """FAQ extraction handles bold question patterns."""
+        agent = DistributionAgent(self.data_dir, self.root, self.articles_dir)
+        html = (
+            '<h2 id="faq">FAQ</h2>'
+            '<p><strong>Is Tool A better?</strong> Yes, it is faster.</p>'
+            '<p><strong>How much does it cost?</strong> Both are free.</p>'
+        )
+        faq = agent._extract_faq(html)
+        self.assertEqual(len(faq), 2)
+
 
 if __name__ == "__main__":
     unittest.main()

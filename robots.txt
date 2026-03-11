@@ -1,4 +1,38 @@
+# DevGuide robots.txt — allow all crawlers including AI search bots
+
 User-agent: *
 Allow: /
+
+# Explicitly allow AI search engine bots for citation and indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Block training-only crawlers (no search citation benefit)
+User-agent: CCBot
+Disallow: /
+
+User-agent: GPTBot-Training
+Disallow: /
 
 Sitemap: https://devguide.co.uk/sitemap.xml
