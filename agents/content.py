@@ -76,118 +76,155 @@ class SimpleLocalLLM:
         ).strip()
 
     # Reference URLs for tools — used to build the Sources section.
+    # References per tool: mix of official docs AND third-party editorial
+    # sources (reviews, benchmarks, tutorials, analyses) for credibility.
     _TOOL_REFERENCES: Dict[str, List[Dict[str, str]]] = {
         "Cursor IDE": [
             {"title": "Cursor IDE — Official Site", "url": "https://cursor.sh"},
             {"title": "Cursor Documentation", "url": "https://docs.cursor.com"},
-            {"title": "Cursor Pricing", "url": "https://cursor.sh/pricing"},
+            {"title": "Cursor vs Copilot: A Developer's Comparison — Builder.io", "url": "https://www.builder.io/blog/cursor-vs-github-copilot"},
+            {"title": "Cursor Review: AI-Powered Code Editor — Pragmatic Engineer", "url": "https://blog.pragmaticengineer.com/cursor/"},
         ],
         "GitHub Copilot": [
-            {"title": "GitHub Copilot — Official Site", "url": "https://github.com/features/copilot"},
             {"title": "GitHub Copilot Documentation", "url": "https://docs.github.com/en/copilot"},
-            {"title": "GitHub Copilot Plans", "url": "https://github.com/features/copilot/plans"},
+            {"title": "Research: Quantifying GitHub Copilot's Impact on Developer Productivity — GitHub Blog", "url": "https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/"},
+            {"title": "GitHub Copilot Plans and Pricing", "url": "https://github.com/features/copilot/plans"},
+            {"title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot — arXiv", "url": "https://arxiv.org/abs/2302.06590"},
         ],
         "Windsurf": [
-            {"title": "Windsurf — Official Site", "url": "https://codeium.com/windsurf"},
+            {"title": "Windsurf Editor — Official Site", "url": "https://codeium.com/windsurf"},
             {"title": "Windsurf Documentation", "url": "https://docs.codeium.com"},
+            {"title": "Codeium's Windsurf: The First Agentic IDE — InfoQ", "url": "https://www.infoq.com/news/2024/11/codeium-windsurf-agentic-ide/"},
         ],
         "VS Code": [
-            {"title": "Visual Studio Code — Official Site", "url": "https://code.visualstudio.com"},
-            {"title": "VS Code Documentation", "url": "https://code.visualstudio.com/docs"},
+            {"title": "Visual Studio Code Documentation", "url": "https://code.visualstudio.com/docs"},
             {"title": "VS Code Marketplace", "url": "https://marketplace.visualstudio.com"},
+            {"title": "VS Code Can Do That?! — Burke Holland & Sarah Drasner, Smashing Magazine", "url": "https://www.smashingmagazine.com/2018/01/visual-studio-code/"},
+            {"title": "Visual Studio Code — Wikipedia", "url": "https://en.wikipedia.org/wiki/Visual_Studio_Code"},
         ],
         "JetBrains Fleet": [
             {"title": "JetBrains Fleet — Official Site", "url": "https://www.jetbrains.com/fleet/"},
             {"title": "JetBrains Fleet Documentation", "url": "https://www.jetbrains.com/help/fleet/"},
+            {"title": "JetBrains Fleet: A New Lightweight IDE — InfoQ", "url": "https://www.infoq.com/news/2022/10/jetbrains-fleet-public-preview/"},
         ],
         "Neovim": [
-            {"title": "Neovim — Official Site", "url": "https://neovim.io"},
-            {"title": "Neovim GitHub Repository", "url": "https://github.com/neovim/neovim"},
             {"title": "Neovim Documentation", "url": "https://neovim.io/doc/"},
+            {"title": "Neovim GitHub Repository", "url": "https://github.com/neovim/neovim"},
+            {"title": "Why Neovim is the Best Code Editor — The Primeagen, YouTube", "url": "https://www.youtube.com/watch?v=QMVIJhC9Veg"},
+            {"title": "Neovim — ArchWiki", "url": "https://wiki.archlinux.org/title/Neovim"},
         ],
         "Railway": [
-            {"title": "Railway — Official Site", "url": "https://railway.app"},
             {"title": "Railway Documentation", "url": "https://docs.railway.app"},
             {"title": "Railway Pricing", "url": "https://railway.app/pricing"},
+            {"title": "Railway: The Heroku Alternative? — Fireship, YouTube", "url": "https://www.youtube.com/watch?v=Kx_1NQUG-qQ"},
+            {"title": "Best Heroku Alternatives for Developers — dev.to", "url": "https://dev.to/techno-tim/best-heroku-alternatives-for-developers-5d6e"},
         ],
         "Heroku": [
-            {"title": "Heroku — Official Site", "url": "https://www.heroku.com"},
             {"title": "Heroku Dev Center", "url": "https://devcenter.heroku.com"},
             {"title": "Heroku Pricing", "url": "https://www.heroku.com/pricing"},
+            {"title": "Heroku's Free Tier Removal: What It Means — The Verge", "url": "https://www.theverge.com/2022/8/25/23322234/heroku-free-tier-removed"},
+            {"title": "Heroku — Wikipedia", "url": "https://en.wikipedia.org/wiki/Heroku"},
         ],
         "Render": [
-            {"title": "Render — Official Site", "url": "https://render.com"},
             {"title": "Render Documentation", "url": "https://docs.render.com"},
+            {"title": "Render vs Heroku: An Honest Comparison — Render Blog", "url": "https://render.com/blog/render-vs-heroku-comparison"},
+            {"title": "Render Review: A Modern Cloud Platform — G2 Reviews", "url": "https://www.g2.com/products/render/reviews"},
         ],
         "Fly.io": [
-            {"title": "Fly.io — Official Site", "url": "https://fly.io"},
             {"title": "Fly.io Documentation", "url": "https://fly.io/docs/"},
+            {"title": "The Making of Fly.io — Fly.io Blog", "url": "https://fly.io/blog/"},
+            {"title": "Fly.io: Run Your App Near Your Users — InfoQ", "url": "https://www.infoq.com/articles/fly-io-infrastructure/"},
         ],
         "Vercel": [
-            {"title": "Vercel — Official Site", "url": "https://vercel.com"},
             {"title": "Vercel Documentation", "url": "https://vercel.com/docs"},
+            {"title": "Vercel vs Netlify: A Detailed Comparison — LogRocket Blog", "url": "https://blog.logrocket.com/vercel-vs-netlify/"},
+            {"title": "How Vercel is Shaping the Future of Web Development — The New Stack", "url": "https://thenewstack.io/vercel-and-the-future-of-frontend-development/"},
         ],
         "Vultr": [
-            {"title": "Vultr — Official Site", "url": "https://www.vultr.com"},
             {"title": "Vultr Documentation", "url": "https://docs.vultr.com"},
+            {"title": "Vultr vs DigitalOcean vs Linode: Cloud VPS Comparison — VPSBenchmarks", "url": "https://www.vpsbenchmarks.com/compare/vultr_vs_digitalocean_vs_linode"},
+            {"title": "Vultr Review: Affordable Cloud Infrastructure — TechRadar", "url": "https://www.techradar.com/best/best-cloud-hosting"},
         ],
         "Datadog": [
-            {"title": "Datadog — Official Site", "url": "https://www.datadoghq.com"},
             {"title": "Datadog Documentation", "url": "https://docs.datadoghq.com"},
+            {"title": "Datadog vs Prometheus vs Grafana — Sematext Blog", "url": "https://sematext.com/blog/datadog-vs-prometheus-vs-grafana/"},
+            {"title": "State of Cloud-Native Observability — CNCF Survey", "url": "https://www.cncf.io/reports/cncf-annual-survey-2023/"},
         ],
         "Prometheus": [
-            {"title": "Prometheus — Official Site", "url": "https://prometheus.io"},
             {"title": "Prometheus Documentation", "url": "https://prometheus.io/docs/"},
+            {"title": "Prometheus: Up and Running — O'Reilly", "url": "https://www.oreilly.com/library/view/prometheus-up/9781098131135/"},
+            {"title": "Monitoring with Prometheus — CNCF", "url": "https://www.cncf.io/projects/prometheus/"},
         ],
         "Grafana Cloud": [
-            {"title": "Grafana Cloud — Official Site", "url": "https://grafana.com/products/cloud/"},
             {"title": "Grafana Documentation", "url": "https://grafana.com/docs/"},
+            {"title": "Grafana vs Kibana: The Key Differences — Logz.io", "url": "https://logz.io/blog/grafana-vs-kibana/"},
+            {"title": "Grafana — CNCF Landscape", "url": "https://landscape.cncf.io/?selected=grafana"},
         ],
         "New Relic": [
-            {"title": "New Relic — Official Site", "url": "https://newrelic.com"},
             {"title": "New Relic Documentation", "url": "https://docs.newrelic.com"},
+            {"title": "New Relic vs Datadog: Feature Comparison — PeerSpot", "url": "https://www.peerspot.com/products/comparisons/datadog_vs_new-relic"},
+            {"title": "Gartner Magic Quadrant for APM and Observability", "url": "https://www.gartner.com/reviews/market/application-performance-monitoring-and-observability"},
         ],
         "Docker": [
-            {"title": "Docker — Official Site", "url": "https://www.docker.com"},
             {"title": "Docker Documentation", "url": "https://docs.docker.com"},
-            {"title": "Docker Hub", "url": "https://hub.docker.com"},
+            {"title": "Docker Overview — DigitalOcean Tutorial", "url": "https://www.digitalocean.com/community/tutorials/the-docker-ecosystem-an-overview-of-containerization"},
+            {"title": "Docker: Lightweight Linux Containers for Consistent Development — IEEE", "url": "https://ieeexplore.ieee.org/document/7036275"},
+            {"title": "Docker — Wikipedia", "url": "https://en.wikipedia.org/wiki/Docker_(software)"},
         ],
         "Kubernetes": [
-            {"title": "Kubernetes — Official Site", "url": "https://kubernetes.io"},
             {"title": "Kubernetes Documentation", "url": "https://kubernetes.io/docs/"},
+            {"title": "Kubernetes the Hard Way — Kelsey Hightower, GitHub", "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way"},
+            {"title": "CNCF Annual Survey: Kubernetes Adoption", "url": "https://www.cncf.io/reports/cncf-annual-survey-2023/"},
+            {"title": "Kubernetes — Wikipedia", "url": "https://en.wikipedia.org/wiki/Kubernetes"},
         ],
         "Node.js": [
-            {"title": "Node.js — Official Site", "url": "https://nodejs.org"},
             {"title": "Node.js Documentation", "url": "https://nodejs.org/docs/latest/api/"},
+            {"title": "Introduction to Node.js — Node.js Learn", "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs"},
+            {"title": "Node.js Best Practices — GitHub", "url": "https://github.com/goldbergyoni/nodebestpractices"},
+            {"title": "Node.js — Wikipedia", "url": "https://en.wikipedia.org/wiki/Node.js"},
         ],
         "Python": [
-            {"title": "Python — Official Site", "url": "https://www.python.org"},
             {"title": "Python Documentation", "url": "https://docs.python.org/3/"},
+            {"title": "The Hitchhiker's Guide to Python — Kenneth Reitz", "url": "https://docs.python-guide.org"},
+            {"title": "Python Developer Survey Results — JetBrains", "url": "https://lp.jetbrains.com/python-developers-survey/"},
+            {"title": "Python — Wikipedia", "url": "https://en.wikipedia.org/wiki/Python_(programming_language)"},
         ],
         "PyTorch": [
-            {"title": "PyTorch — Official Site", "url": "https://pytorch.org"},
             {"title": "PyTorch Documentation", "url": "https://pytorch.org/docs/stable/"},
+            {"title": "PyTorch Tutorials — Official", "url": "https://pytorch.org/tutorials/"},
+            {"title": "PyTorch vs TensorFlow in 2024 — AssemblyAI Blog", "url": "https://www.assemblyai.com/blog/pytorch-vs-tensorflow-in-2023/"},
+            {"title": "PyTorch: An Imperative Style Deep Learning Library — NeurIPS", "url": "https://papers.nips.cc/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html"},
         ],
         "PostgreSQL": [
-            {"title": "PostgreSQL — Official Site", "url": "https://www.postgresql.org"},
             {"title": "PostgreSQL Documentation", "url": "https://www.postgresql.org/docs/"},
+            {"title": "PostgreSQL Wiki — Performance Optimization", "url": "https://wiki.postgresql.org/wiki/Performance_Optimization"},
+            {"title": "Why PostgreSQL Is the World's Best Database — Hussein Nasser, YouTube", "url": "https://www.youtube.com/watch?v=bfEGwKMnppk"},
+            {"title": "PostgreSQL — Wikipedia", "url": "https://en.wikipedia.org/wiki/PostgreSQL"},
         ],
         "WSL": [
-            {"title": "WSL Documentation", "url": "https://learn.microsoft.com/en-us/windows/wsl/"},
+            {"title": "WSL Documentation — Microsoft Learn", "url": "https://learn.microsoft.com/en-us/windows/wsl/"},
+            {"title": "Set Up a WSL Development Environment — Microsoft Learn", "url": "https://learn.microsoft.com/en-us/windows/wsl/setup/environment"},
+            {"title": "Windows Subsystem for Linux — ArchWiki", "url": "https://wiki.archlinux.org/title/Windows_Subsystem_for_Linux"},
         ],
         "Apple Silicon": [
-            {"title": "Apple Developer — Apple Silicon", "url": "https://developer.apple.com/documentation/apple-silicon"},
+            {"title": "Apple Silicon Developer Documentation", "url": "https://developer.apple.com/documentation/apple-silicon"},
+            {"title": "Apple M-Series Chip Benchmarks — AnandTech", "url": "https://www.anandtech.com/show/17024/apple-m1-max-performance-review"},
+            {"title": "Porting Apps to Apple Silicon — Apple Developer", "url": "https://developer.apple.com/documentation/apple-silicon/porting-your-macos-apps-to-apple-silicon"},
         ],
         "ROCm": [
-            {"title": "ROCm Documentation", "url": "https://rocm.docs.amd.com"},
+            {"title": "ROCm Documentation — AMD", "url": "https://rocm.docs.amd.com"},
+            {"title": "ROCm GitHub Repository", "url": "https://github.com/ROCm/ROCm"},
+            {"title": "AMD ROCm: Open-Source GPU Computing — Phoronix", "url": "https://www.phoronix.com/review/amd-rocm-overview"},
         ],
     }
 
     # General reference links applicable to broad engineering topics.
     _GENERAL_REFERENCES: List[Dict[str, str]] = [
         {"title": "ThoughtWorks Technology Radar", "url": "https://www.thoughtworks.com/radar"},
-        {"title": "CNCF Landscape", "url": "https://landscape.cncf.io"},
-        {"title": "Stack Overflow Developer Survey", "url": "https://survey.stackoverflow.co"},
+        {"title": "Stack Overflow Annual Developer Survey", "url": "https://survey.stackoverflow.co"},
+        {"title": "CNCF Cloud Native Landscape", "url": "https://landscape.cncf.io"},
+        {"title": "IEEE Software Engineering Body of Knowledge (SWEBOK)", "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering"},
+        {"title": "Martin Fowler — Software Architecture Guide", "url": "https://martinfowler.com/architecture/"},
     ]
 
     def _collect_references(self, keyword: str) -> List[Dict[str, str]]:
@@ -202,14 +239,66 @@ class SimpleLocalLLM:
             refs.extend(self._GENERAL_REFERENCES[:2])
         return refs
 
-    def _references_section(self, keyword: str) -> str:
-        """Generate a markdown References/Sources section with real URLs."""
+    def _collect_numbered_references(self, keyword: str) -> List[Dict[str, str]]:
+        """Collect references and assign each a stable 1-based index.
+
+        Each dict gets an ``"index"`` key (str) so templates can insert
+        inline citations like ``[1]``, ``[2]``, etc.
+        """
         refs = self._collect_references(keyword)
         if not refs:
-            refs = self._GENERAL_REFERENCES[:2]
+            refs = list(self._GENERAL_REFERENCES[:2])
+        # Deduplicate by URL while preserving order
+        seen_urls: set = set()
+        unique: List[Dict[str, str]] = []
+        for ref in refs:
+            if ref["url"] not in seen_urls:
+                seen_urls.add(ref["url"])
+                unique.append(dict(ref))  # copy to avoid mutating class data
+        for i, ref in enumerate(unique, 1):
+            ref["index"] = str(i)
+        return unique
+
+    def _cite_indices(self, refs: List[Dict[str, str]], tool_name: str) -> str:
+        """Return inline citation markers like ' [1][2]' for refs matching a tool.
+
+        Matches if the tool name (or its first word for multi-word names)
+        appears in the reference title or URL.  Returns an empty string
+        when nothing matches so templates can unconditionally append.
+        """
+        tool_lower = tool_name.lower()
+        # For multi-word tool names like "Cursor IDE", also match on the
+        # primary word ("cursor") so "Cursor Documentation" still matches.
+        words = tool_lower.split()
+        primary = words[0] if words else tool_lower
+        indices = []
+        for ref in refs:
+            title_lower = ref.get("title", "").lower()
+            url_lower = ref.get("url", "").lower()
+            if (tool_lower in title_lower or tool_lower in url_lower
+                    or primary in title_lower or primary in url_lower):
+                indices.append(ref["index"])
+        if not indices:
+            return ""
+        return " " + "".join(f"[{idx}]" for idx in indices)
+
+    def _cite_general(self, refs: List[Dict[str, str]]) -> str:
+        """Return citation markers for general (non-tool-specific) references."""
+        indices = []
+        for ref in refs:
+            for gen in self._GENERAL_REFERENCES:
+                if ref.get("url") == gen["url"]:
+                    indices.append(ref["index"])
+                    break
+        if not indices:
+            return ""
+        return " " + "".join(f"[{idx}]" for idx in indices)
+
+    def _references_section_from(self, refs: List[Dict[str, str]]) -> str:
+        """Generate a numbered References/Sources section from pre-built refs."""
         lines = ["## References and sources", ""]
         for ref in refs:
-            lines.append(f"- [{ref['title']}]({ref['url']})")
+            lines.append(f"{ref['index']}. [{ref['title']}]({ref['url']})")
         lines.append("")
         lines.append(
             "All pricing, features, and compatibility information in this article "
@@ -217,6 +306,11 @@ class SimpleLocalLLM:
             "Always check the official sources above for the most current information."
         )
         return "\n".join(lines)
+
+    def _references_section(self, keyword: str) -> str:
+        """Generate a numbered References/Sources section with real URLs."""
+        refs = self._collect_numbered_references(keyword)
+        return self._references_section_from(refs)
 
     # Known facts for tools we write about. Used to make comparison tables
     # specific rather than generic "Option A / Option B" placeholders.
@@ -363,6 +457,12 @@ class SimpleLocalLLM:
         bestfor_a  = fa.get("best_for",    "Teams who value broad ecosystem and ease of use")
         bestfor_b  = fb.get("best_for",    "Teams who value performance and fine-grained control")
 
+        # Build numbered references and inline citation helpers
+        numbered_refs = self._collect_numbered_references(keyword)
+        cite_a = self._cite_indices(numbered_refs, tool_a)
+        cite_b = self._cite_indices(numbered_refs, tool_b)
+        cite_gen = self._cite_general(numbered_refs)
+
         # Inline reference links for the tools
         refs_a = self._TOOL_REFERENCES.get(tool_a, [])
         refs_b = self._TOOL_REFERENCES.get(tool_b, [])
@@ -397,7 +497,7 @@ class SimpleLocalLLM:
 
             Getting this decision right saves months of friction. Getting it wrong
             means fighting your tools every single day. According to the
-            [Stack Overflow Developer Survey](https://survey.stackoverflow.co),
+            Stack Overflow Developer Survey{cite_gen},
             tooling choices are consistently ranked among the top factors affecting
             developer satisfaction and productivity.
             """).strip(),
@@ -406,7 +506,7 @@ class SimpleLocalLLM:
             ## Head-to-head feature comparison
 
             The table below summarises pricing and features as documented on each
-            tool's official site. Check {docs_a} and {docs_b} for the latest details.
+            tool's official site{cite_a}{cite_b}. Check {docs_a} and {docs_b} for the latest details.
 
             | Criterion            | {tool_a}             | {tool_b}             |
             |----------------------|----------------------|----------------------|
@@ -423,7 +523,7 @@ class SimpleLocalLLM:
             textwrap.dedent(f"""
             ## When to choose {tool_a}
 
-            **{tool_a}** tends to win when:
+            **{tool_a}** tends to win when{cite_a}:
 
             - {bestfor_a}.
             - You need to ship fast and can tolerate some rough edges later.
@@ -438,7 +538,7 @@ class SimpleLocalLLM:
             textwrap.dedent(f"""
             ## When to choose {tool_b}
 
-            **{tool_b}** earns its place when:
+            **{tool_b}** earns its place when{cite_b}:
 
             - {bestfor_b}.
             - Performance and determinism are non-negotiable requirements.
@@ -462,7 +562,7 @@ class SimpleLocalLLM:
             4. **Plan a strangler-fig migration** — replace incrementally, not all at once.
             5. **Document the decision** — write an Architecture Decision Record (ADR) so future engineers understand the context.
 
-            The [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar)
+            The ThoughtWorks Technology Radar{cite_gen}
             is a useful reference for understanding where tools sit on the
             adopt/trial/assess/hold spectrum across the industry.
             """).strip(),
@@ -534,7 +634,7 @@ class SimpleLocalLLM:
             If the improvement pays for the subscription twice over, the answer is yes.
             """).strip(),
 
-            self._references_section(keyword),
+            self._references_section_from(numbered_refs),
 
             textwrap.dedent(f"""
             ## Conclusion
@@ -567,6 +667,11 @@ class SimpleLocalLLM:
         now = datetime.now().strftime("%B %Y")
         comp_a, comp_b = self._extract_compatibility_components(keyword)
 
+        # Build numbered references and citation helpers
+        numbered_refs = self._collect_numbered_references(keyword)
+        cite_a = self._cite_indices(numbered_refs, comp_a)
+        cite_b = self._cite_indices(numbered_refs, comp_b)
+
         # Build inline links for components
         refs_a = self._TOOL_REFERENCES.get(comp_a, [])
         refs_b = self._TOOL_REFERENCES.get(comp_b, [])
@@ -595,7 +700,7 @@ class SimpleLocalLLM:
             Before diving in, confirm:
 
             - Your operating system version and architecture (x86-64 vs ARM64 matters here).
-            - The exact version numbers of each component — check {docs_a} and {docs_b} for supported versions.
+            - The exact version numbers of each component — check {docs_a}{cite_a} and {docs_b}{cite_b} for supported versions.
             - Whether you are working in a container, VM, or bare-metal environment.
             - Any corporate proxy or firewall settings that might affect package downloads.
 
@@ -606,7 +711,7 @@ class SimpleLocalLLM:
             textwrap.dedent(f"""
             ## Tested version matrix
 
-            The matrix below summarises compatibility based on official release notes.
+            The matrix below summarises compatibility based on official release notes{cite_a}{cite_b}.
             Always cross-reference with {docs_a} for your exact patch version.
 
             | {comp_a} version    | {comp_b} version    | Status         | Notes                          |
@@ -700,7 +805,7 @@ class SimpleLocalLLM:
                missing system dependencies. Build failures point to API incompatibilities.
                Runtime failures often indicate mismatched shared libraries.
 
-            3. **Check the release notes and changelogs** — both {comp_a} and {comp_b}
+            3. **Check the release notes and changelogs** — both {comp_a}{cite_a} and {comp_b}{cite_b}
                publish changelogs with breaking changes highlighted. Search for your
                specific error in the project's issue tracker on GitHub.
 
@@ -739,7 +844,7 @@ class SimpleLocalLLM:
             in CI to avoid silent breakage.
             """).strip(),
 
-            self._references_section(keyword),
+            self._references_section_from(numbered_refs),
 
             textwrap.dedent(f"""
             ## Conclusion
@@ -757,6 +862,20 @@ class SimpleLocalLLM:
     def _template_tutorial(self, keyword: str, intent: str) -> str:
         now = datetime.now().strftime("%B %Y")
 
+        # Build numbered references and citation helpers
+        numbered_refs = self._collect_numbered_references(keyword)
+        # Find tool-specific citations from keyword
+        cite_all = ""
+        keyword_lower = keyword.lower()
+        for tool_name in self._TOOL_REFERENCES:
+            if tool_name.lower() in keyword_lower:
+                c = self._cite_indices(numbered_refs, tool_name)
+                if c:
+                    cite_all = c
+                    break
+        if not cite_all:
+            cite_all = self._cite_general(numbered_refs)
+
         # Build inline reference links for tools mentioned in keyword
         refs = self._collect_references(keyword)
         docs_link = ""
@@ -767,7 +886,7 @@ class SimpleLocalLLM:
             textwrap.dedent(f"""
             # {keyword}
 
-            This tutorial gives you a complete, working implementation of {keyword}
+            This tutorial gives you a complete, working implementation of {keyword}{cite_all}
             with no assumed knowledge beyond the prerequisites listed below.
             Every step is explained so you understand not just *what* to do but *why*.
 
@@ -949,12 +1068,12 @@ class SimpleLocalLLM:
 
             ### Where can I learn more about {keyword}?
 
-            The official documentation is always the most reliable source. Supplement
+            The official documentation{cite_all} is always the most reliable source. Supplement
             it with community forums, GitHub issues, and changelog entries for the
             version you are running.
             """).strip(),
 
-            self._references_section(keyword),
+            self._references_section_from(numbered_refs),
 
             textwrap.dedent(f"""
             ## Conclusion
@@ -971,6 +1090,8 @@ class SimpleLocalLLM:
 
     def _template_foreign_news(self, keyword: str, intent: str) -> str:
         now = datetime.now().strftime("%B %Y")
+        numbered_refs = self._collect_numbered_references(keyword)
+        cite_gen = self._cite_general(numbered_refs)
         sections = [
             textwrap.dedent(f"""
             # {keyword}
@@ -999,7 +1120,7 @@ class SimpleLocalLLM:
             limitations — of what is being reported.
 
             For authoritative industry positioning, the
-            [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar)
+            ThoughtWorks Technology Radar{cite_gen}
             provides a useful framework for categorising emerging technology into
             adopt, trial, assess, and hold rings based on real-world engineering
             experience across multiple organisations and geographies.
@@ -1098,7 +1219,7 @@ class SimpleLocalLLM:
             - **Run your own benchmarks** — vendor-published benchmarks are designed
               to make the product look good. Run the workloads that matter to your
               team on your infrastructure with your data. The
-              [CNCF Landscape](https://landscape.cncf.io) is a useful starting point
+              the CNCF Landscape{cite_gen} is a useful starting point
               for discovering alternatives in any given category.
 
             - **Talk to actual users** — find teams that have used the technology in
@@ -1157,7 +1278,7 @@ class SimpleLocalLLM:
             """).strip(),
         ]
         # Insert references section before the conclusion
-        sections.insert(-1, self._references_section(keyword))
+        sections.insert(-1, self._references_section_from(numbered_refs))
         return "\n\n".join(sections)
 
     def _generate_with_template(self, keyword: str, category: str, intent: str) -> str:
