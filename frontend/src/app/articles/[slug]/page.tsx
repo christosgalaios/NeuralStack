@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getAllSlugs, getArticle, getRelatedArticles } from "@/lib/articles";
+import { getAllSlugs, getArticle, getRelatedArticles, getRelevantAffiliate } from "@/lib/articles";
 import { SITE_NAME, BASE_URL, CATEGORY_META } from "@/lib/config";
 import ReadingProgress from "@/components/article/ReadingProgress";
 import TableOfContents from "@/components/article/TableOfContents";
@@ -99,12 +99,17 @@ export default async function ArticlePage({
               dangerouslySetInnerHTML={{ __html: article.content_html }}
             />
 
-            {/* In-article affiliate callout */}
-            <ToolCallout
-              name={article.affiliate.name}
-              url={article.affiliate.url}
-              description={article.affiliate.description}
-            />
+            {/* In-article affiliate callout — only if relevant */}
+            {(() => {
+              const aff = getRelevantAffiliate(article);
+              return aff ? (
+                <ToolCallout
+                  name={aff.name}
+                  url={aff.url}
+                  description={aff.description}
+                />
+              ) : null;
+            })()}
 
             {/* FAQ section */}
             {article.faq && article.faq.length > 0 && (
@@ -129,11 +134,6 @@ export default async function ArticlePage({
             <div className="sticky top-20 flex flex-col gap-6">
               <TableOfContents items={article.toc} />
               <AdSlot position="sidebar" />
-              <ToolCallout
-                name={article.affiliate.name}
-                url={article.affiliate.url}
-                description={article.affiliate.description}
-              />
             </div>
           </aside>
         </div>
