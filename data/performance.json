@@ -148,9 +148,17 @@
       "generated_articles": 5,
       "published_articles": 5,
       "errors": []
+    },
+    {
+      "timestamp": "2026-03-11T15:33:36.672872Z",
+      "status": "success",
+      "generated_topics": 5,
+      "generated_articles": 5,
+      "published_articles": 2,
+      "errors": []
     }
   ],
-  "articles_published": 83,
-  "last_run": "2026-03-11T12:36:34.377491Z",
+  "articles_published": 85,
+  "last_run": "2026-03-11T15:33:36.672872Z",
   "errors": []
 }

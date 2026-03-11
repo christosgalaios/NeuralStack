@@ -5587,7 +5587,7 @@
     "difficulty_score": 0.1,
     "source": "manual-affiliate-seeds",
     "created_at": "2026-03-11T15:19:08.984428+00:00",
-    "status": "new"
+    "status": "drafted"
   },
   {
     "id": "vultr-deploy-python-flask",
@@ -5597,7 +5597,7 @@
     "difficulty_score": 0.1,
     "source": "manual-affiliate-seeds",
     "created_at": "2026-03-11T15:19:08.984428+00:00",
-    "status": "new"
+    "status": "drafted"
   },
   {
     "id": "vultr-kubernetes-cluster",
@@ -5607,7 +5607,7 @@
     "difficulty_score": 0.1,
     "source": "manual-affiliate-seeds",
     "created_at": "2026-03-11T15:19:08.984428+00:00",
-    "status": "new"
+    "status": "drafted"
   },
   {
     "id": "vultr-vs-digitalocean",
@@ -5617,7 +5617,7 @@
     "difficulty_score": 0.1,
     "source": "manual-affiliate-seeds",
     "created_at": "2026-03-11T15:19:08.984428+00:00",
-    "status": "new"
+    "status": "published"
   },
   {
     "id": "vultr-vs-linode",
@@ -5627,7 +5627,7 @@
     "difficulty_score": 0.1,
     "source": "manual-affiliate-seeds",
     "created_at": "2026-03-11T15:19:08.984428+00:00",
-    "status": "new"
+    "status": "published"
   },
   {
     "id": "vultr-vs-aws-lightsail",
