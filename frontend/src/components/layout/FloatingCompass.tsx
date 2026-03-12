@@ -124,6 +124,9 @@ export default function FloatingCompass() {
         {/* Inner ring */}
         <circle cx="20" cy="20" r="13.5" fill="none" stroke="#7a8494" strokeWidth="0.5" opacity="0.15" />
 
+        {/* North arrow — signals "back to top" */}
+        <polygon points="20,1 17,5 20,3 23,5" fill="#1a8a9a" opacity="0.8" />
+
         {/* Needle group — tracks mouse/touch */}
         <g ref={needleRef} style={{ transformOrigin: "20px 20px" }}>
           <path d="M20,3 L17,12 L14.5,17.5 L18,20 L20,17 L22,20 L25.5,17.5 L23,12 Z" fill="url(#fc-n)" />
