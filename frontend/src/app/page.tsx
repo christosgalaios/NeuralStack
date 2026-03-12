@@ -2,6 +2,7 @@ import { getAllArticles, getAllCategories, getAllTags } from "@/lib/articles";
 import { SITE_NAME, SITE_DESCRIPTION, BASE_URL, CATEGORY_META, AFFILIATES } from "@/lib/config";
 import ArticleCard from "@/components/cards/ArticleCard";
 import AdSlot from "@/components/monetization/AdSlot";
+import GyroCompass from "@/components/GyroCompass";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -14,21 +15,26 @@ export default function HomePage() {
   return (
     <div className="animate-in">
       {/* Hero */}
-      <section className="py-8 sm:py-12">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "var(--text-primary)" }}>
-          Pick the right dev tools &mdash; skip the research rabbit hole
-        </h1>
-        <p className="mt-2 text-base" style={{ color: "var(--text-muted)" }}>
-          Honest comparisons, compatibility guides, and hands-on reviews of the tools engineers actually use.
-        </p>
-        <div className="mt-4">
-          <Link
-            href="/tools"
-            className="inline-block rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:opacity-90"
-            style={{ background: "var(--accent-cta)" }}
-          >
-            See Recommended Tools &rarr;
-          </Link>
+      <section className="flex items-center gap-8 py-8 sm:py-12">
+        <div className="flex-1">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "var(--text-primary)" }}>
+            Pick the right dev tools &mdash; skip the research rabbit hole
+          </h1>
+          <p className="mt-2 text-base" style={{ color: "var(--text-muted)" }}>
+            Honest comparisons, compatibility guides, and hands-on reviews of the tools engineers actually use.
+          </p>
+          <div className="mt-4">
+            <Link
+              href="/tools"
+              className="inline-block rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:opacity-90"
+              style={{ background: "var(--accent-cta)" }}
+            >
+              See Recommended Tools &rarr;
+            </Link>
+          </div>
+        </div>
+        <div className="shrink-0">
+          <GyroCompass />
         </div>
       </section>
 
