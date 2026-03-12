@@ -11,7 +11,7 @@ export default function SiteHeader() {
   const { theme, toggle: toggleTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-50 border-b backdrop-blur-xl" style={{ borderColor: "var(--border)", background: "color-mix(in srgb, var(--bg-primary) 85%, transparent)" }}>
+    <header className="sticky top-0 z-50 border-b backdrop-blur-xl" style={{ borderImage: "linear-gradient(90deg, transparent, #1a8a9a33, transparent) 1", background: "color-mix(in srgb, var(--bg-primary) 85%, transparent)" }}>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-2.5 text-lg font-bold tracking-tight" style={{ color: "var(--text-primary)" }}>
