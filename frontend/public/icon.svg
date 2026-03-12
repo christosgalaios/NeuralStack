@@ -29,9 +29,9 @@
   <polygon points="98,50 88,44 93,50 88,56" fill="#9aa4b4" opacity="0.45"/>
   <text x="81" y="53" text-anchor="middle" font-size="7" font-weight="800" font-family="Inter, system-ui, sans-serif" fill="#b0bac8" opacity="0.7">V</text>
 
-  <!-- Bottom: G -->
-  <polygon points="50,98 56,88 50,93 44,88" fill="#9aa4b4" opacity="0.45"/>
-  <text x="50" y="86" text-anchor="middle" font-size="7" font-weight="800" font-family="Inter, system-ui, sans-serif" fill="#b0bac8" opacity="0.7">G</text>
+  <!-- Bottom: G (accent teal) -->
+  <polygon points="50,98 56,88 50,93 44,88" fill="#1a8a9a" opacity="0.7"/>
+  <text x="50" y="86" text-anchor="middle" font-size="7" font-weight="800" font-family="Inter, system-ui, sans-serif" fill="#1a9aaa" opacity="0.9">G</text>
 
   <!-- Inner < / > code symbols -->
   <text x="31" y="53" text-anchor="middle" font-size="8" font-weight="700" font-family="monospace" fill="#4cc0d0" opacity="0.25">&lt;</text>

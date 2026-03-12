@@ -138,10 +138,10 @@ h1, h2, h3, h4 {
 }
 
 .article-content blockquote {
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid #1a8a9a;
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
-  background: var(--accent-glow);
+  background: rgba(13, 74, 90, 0.08);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   color: var(--text-secondary);
 }
@@ -209,7 +209,9 @@ h1, h2, h3, h4 {
 .article-content pre {
   background: var(--code-bg);
   border: 1px solid var(--border);
-  border-top: 2px solid var(--accent);
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, #0d4a5a, #1a8a9a, #4cc0d0) 1;
+  border-image-slice: 1 0 0 0;
   border-radius: var(--radius-sm);
   padding: 1.25rem;
   overflow-x: auto;
@@ -309,14 +311,14 @@ h1, h2, h3, h4 {
 }
 .tool-card-hover:hover {
   border-color: var(--accent-cta) !important;
-  box-shadow: 0 0 12px rgba(34, 197, 94, 0.08);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.08), 0 0 24px rgba(26, 138, 154, 0.05);
 }
 
 .archive-link-hover {
   transition: border-color 0.2s;
 }
 .archive-link-hover:hover {
-  border-color: var(--accent) !important;
+  border-color: #1a8a9a !important;
 }
 
 /* ─── Compass Logo ─────────────────────────────────────────── */

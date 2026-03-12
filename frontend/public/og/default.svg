@@ -1,22 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
   <!-- Background -->
-  <rect width="1200" height="630" fill="#0a0a0b"/>
+  <rect width="1200" height="630" fill="#080b0d"/>
   <rect width="1200" height="630" fill="url(#bg-grad)" opacity="0.5"/>
   <defs>
     <linearGradient id="bg-grad" x1="0" y1="0" x2="1200" y2="630">
-      <stop offset="0%" stop-color="#111114"/>
-      <stop offset="100%" stop-color="#0a0a0b"/>
+      <stop offset="0%" stop-color="#0e1317"/>
+      <stop offset="100%" stop-color="#080b0d"/>
     </linearGradient>
   </defs>
 
   <!-- Decorative grid dots -->
   <g opacity="0.08">
-    <circle cx="100" cy="100" r="2" fill="#3b82f6"/>
-    <circle cx="160" cy="100" r="2" fill="#3b82f6"/>
-    <circle cx="220" cy="100" r="2" fill="#3b82f6"/>
-    <circle cx="100" cy="160" r="2" fill="#3b82f6"/>
-    <circle cx="160" cy="160" r="2" fill="#3b82f6"/>
-    <circle cx="220" cy="160" r="2" fill="#3b82f6"/>
+    <circle cx="100" cy="100" r="2" fill="#1a8a9a"/>
+    <circle cx="160" cy="100" r="2" fill="#1a8a9a"/>
+    <circle cx="220" cy="100" r="2" fill="#1a8a9a"/>
+    <circle cx="100" cy="160" r="2" fill="#1a8a9a"/>
+    <circle cx="160" cy="160" r="2" fill="#1a8a9a"/>
+    <circle cx="220" cy="160" r="2" fill="#1a8a9a"/>
     <circle cx="1000" cy="450" r="2" fill="#4db8c9"/>
     <circle cx="1060" cy="450" r="2" fill="#4db8c9"/>
     <circle cx="1120" cy="450" r="2" fill="#4db8c9"/>
@@ -39,18 +39,20 @@
   </g>
 
   <!-- Brand name -->
-  <text x="140" y="72" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="#fafafa" letter-spacing="-0.02em">Dev Guide</text>
+  <text x="140" y="72" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" letter-spacing="-0.02em">
+    <tspan fill="#e8edf2">Dev </tspan><tspan fill="#1a9aaa">Guide</tspan>
+  </text>
 
   <!-- Main title -->
-  <text x="80" y="300" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="800" fill="#fafafa" letter-spacing="-0.03em">AI-Powered Developer</text>
-  <text x="80" y="365" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="800" fill="#fafafa" letter-spacing="-0.03em">Intelligence</text>
+  <text x="80" y="300" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="800" fill="#e8edf2" letter-spacing="-0.03em">AI-Powered Developer</text>
+  <text x="80" y="365" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="800" fill="#e8edf2" letter-spacing="-0.03em">Intelligence</text>
 
   <!-- Tagline -->
-  <text x="80" y="420" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#a1a1aa">In-depth technical guides, reviews, and comparisons</text>
-  <text x="80" y="450" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#a1a1aa">for modern developers.</text>
+  <text x="80" y="420" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#9aa4b4">In-depth technical guides, reviews, and comparisons</text>
+  <text x="80" y="450" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#9aa4b4">for modern developers.</text>
 
   <!-- Domain -->
-  <text x="80" y="570" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#71717a">devguide.co.uk</text>
+  <text x="80" y="570" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#6b7a8d">devguide.co.uk</text>
 
   <!-- Bottom accent line -->
   <rect x="0" y="624" width="1200" height="6" fill="url(#accent-line)"/>
@@ -63,7 +65,7 @@
   </defs>
 
   <!-- Decorative circles -->
-  <circle cx="1050" cy="200" r="80" stroke="#3b82f6" stroke-width="1" fill="none" opacity="0.08"/>
+  <circle cx="1050" cy="200" r="80" stroke="#1a8a9a" stroke-width="1" fill="none" opacity="0.08"/>
   <circle cx="1050" cy="200" r="50" stroke="#4db8c9" stroke-width="1" fill="none" opacity="0.06"/>
-  <circle cx="950" cy="350" r="120" stroke="#8b5cf6" stroke-width="0.8" fill="none" opacity="0.05"/>
+  <circle cx="950" cy="350" r="120" stroke="#0d4a5a" stroke-width="0.8" fill="none" opacity="0.05"/>
 </svg>

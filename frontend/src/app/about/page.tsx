@@ -18,7 +18,7 @@ export default function AboutPage() {
       </nav>
 
       <h1 className="text-2xl font-extrabold sm:text-3xl" style={{ color: "var(--text-primary)" }}>
-        About {SITE_NAME}
+        About Dev <span style={{ color: "#1a9aaa" }}>Guide</span>
       </h1>
 
       <div className="mt-6 flex flex-col gap-6 text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
