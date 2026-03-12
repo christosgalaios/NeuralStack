@@ -421,6 +421,36 @@
     ]
   },
   {
+    "slug": "mysql-8-on-apple-silicon-m3-compatibility-guide",
+    "title": "MySQL 8 on Apple Silicon M3 compatibility guide",
+    "description": "MySQL 8 on Apple Silicon M3 compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-12",
+    "reading_time_minutes": 6,
+    "tags": [
+      "apple",
+      "compatibility",
+      "mysql",
+      "silicon"
+    ]
+  },
+  {
+    "slug": "mysql-8-on-windows-11-arm-compatibility-guide",
+    "title": "MySQL 8 on Windows 11 ARM compatibility guide",
+    "description": "MySQL 8 on Windows 11 ARM compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-12",
+    "reading_time_minutes": 6,
+    "tags": [
+      "arm",
+      "compatibility",
+      "mysql",
+      "windows"
+    ]
+  },
+  {
     "slug": "postgresql-inside-github-codespaces-compatibility-guide",
     "title": "PostgreSQL inside GitHub Codespaces compatibility guide",
     "description": "PostgreSQL inside GitHub Codespaces compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
@@ -505,6 +535,50 @@
       "compatibility",
       "cuda",
       "postgresql"
+    ]
+  },
+  {
+    "slug": "postgresql-with-docker-compose-v2-compatibility-guide",
+    "title": "PostgreSQL with Docker Compose v2 compatibility guide",
+    "description": "PostgreSQL with Docker Compose v2 compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-12",
+    "reading_time_minutes": 7,
+    "tags": [
+      "compatibility",
+      "compose",
+      "docker",
+      "postgresql"
+    ]
+  },
+  {
+    "slug": "postgresql-with-kubernetes-1-30-compatibility-guide",
+    "title": "PostgreSQL with Kubernetes 1.30 compatibility guide",
+    "description": "PostgreSQL with Kubernetes 1.30 compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-12",
+    "reading_time_minutes": 7,
+    "tags": [
+      "compatibility",
+      "kubernetes",
+      "postgresql"
+    ]
+  },
+  {
+    "slug": "postgresql-with-prisma-orm-compatibility-guide",
+    "title": "PostgreSQL with Prisma ORM compatibility guide",
+    "description": "PostgreSQL with Prisma ORM compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-12",
+    "reading_time_minutes": 7,
+    "tags": [
+      "compatibility",
+      "orm",
+      "postgresql",
+      "prisma"
     ]
   },
   {
