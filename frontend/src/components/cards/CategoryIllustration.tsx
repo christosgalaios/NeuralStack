@@ -2,12 +2,12 @@
 // Designed for dark tech aesthetic — transparent bg, works in both themes
 
 const COLORS: Record<string, { primary: string; secondary: string; glow: string }> = {
-  guide:         { primary: "#64748b", secondary: "#94a3b8", glow: "rgba(100,116,139,0.15)" },
-  review:        { primary: "#f59e0b", secondary: "#fbbf24", glow: "rgba(245,158,11,0.15)" },
-  comparison:    { primary: "#3b82f6", secondary: "#60a5fa", glow: "rgba(59,130,246,0.15)" },
-  compatibility: { primary: "#8b5cf6", secondary: "#a78bfa", glow: "rgba(139,92,246,0.15)" },
+  guide:         { primary: "#1a8a9a", secondary: "#4cc0d0", glow: "rgba(26,138,154,0.15)" },
+  review:        { primary: "#c8964a", secondary: "#ddb068", glow: "rgba(200,150,74,0.15)" },
+  comparison:    { primary: "#0d6a7a", secondary: "#2da0b0", glow: "rgba(13,106,122,0.15)" },
+  compatibility: { primary: "#7a8494", secondary: "#9aa4b4", glow: "rgba(122,132,148,0.15)" },
   tutorial:      { primary: "#22c55e", secondary: "#4ade80", glow: "rgba(34,197,94,0.15)" },
-  news:          { primary: "#ef4444", secondary: "#f87171", glow: "rgba(239,68,68,0.15)" },
+  news:          { primary: "#c05858", secondary: "#d47878", glow: "rgba(192,88,88,0.15)" },
 };
 
 function GuideSVG({ p, s }: { p: string; s: string }) {
