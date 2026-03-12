@@ -24,7 +24,12 @@ export function useTheme() {
   }, [theme]);
 
   const toggle = useCallback(() => {
+    // Enable smooth transition, then remove after animation completes
+    document.documentElement.classList.add("theme-transition");
     setThemeState((prev) => (prev === "dark" ? "light" : "dark"));
+    setTimeout(() => {
+      document.documentElement.classList.remove("theme-transition");
+    }, 500);
   }, []);
 
   return { theme, toggle };

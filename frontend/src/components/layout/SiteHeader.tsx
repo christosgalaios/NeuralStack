@@ -26,8 +26,7 @@ export default function SiteHeader() {
           <Link href="/about" className="text-sm transition-colors hover:opacity-80" style={{ color: "var(--text-secondary)" }}>About</Link>
           <button
             onClick={toggleTheme}
-            className="flex h-8 w-8 items-center justify-center rounded-lg transition-colors"
-            style={{ color: "var(--text-secondary)", background: "var(--bg-elevated)" }}
+            className="theme-toggle"
             aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
             {theme === "dark" ? (
@@ -56,8 +55,7 @@ export default function SiteHeader() {
         <div className="flex items-center gap-2 md:hidden">
           <button
             onClick={toggleTheme}
-            className="flex h-10 w-10 items-center justify-center rounded-lg transition-colors"
-            style={{ color: "var(--text-secondary)", background: "var(--bg-elevated)" }}
+            className="theme-toggle"
             aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
             {theme === "dark" ? (
