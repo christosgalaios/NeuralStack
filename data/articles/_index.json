@@ -1,5 +1,78 @@
 [
   {
+    "slug": "mongodb-7-inside-github-codespaces-compatibility-guide",
+    "title": "MongoDB 7 inside GitHub Codespaces compatibility guide",
+    "description": "MongoDB 7 inside GitHub Codespaces compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-13",
+    "reading_time_minutes": 6,
+    "tags": [
+      "codespaces",
+      "compatibility",
+      "github",
+      "mongodb"
+    ]
+  },
+  {
+    "slug": "mongodb-7-on-nixos-compatibility-guide",
+    "title": "MongoDB 7 on NixOS compatibility guide",
+    "description": "MongoDB 7 on NixOS compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-13",
+    "reading_time_minutes": 6,
+    "tags": [
+      "compatibility",
+      "mongodb",
+      "nixos"
+    ]
+  },
+  {
+    "slug": "mongodb-7-on-raspberry-pi-5-compatibility-guide",
+    "title": "MongoDB 7 on Raspberry Pi 5 compatibility guide",
+    "description": "MongoDB 7 on Raspberry Pi 5 compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-13",
+    "reading_time_minutes": 6,
+    "tags": [
+      "compatibility",
+      "mongodb",
+      "raspberry"
+    ]
+  },
+  {
+    "slug": "mongodb-7-with-docker-compose-v2-compatibility-guide",
+    "title": "MongoDB 7 with Docker Compose v2 compatibility guide",
+    "description": "MongoDB 7 with Docker Compose v2 compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-13",
+    "reading_time_minutes": 6,
+    "tags": [
+      "compatibility",
+      "compose",
+      "docker",
+      "mongodb"
+    ]
+  },
+  {
+    "slug": "mongodb-7-with-prisma-orm-compatibility-guide",
+    "title": "MongoDB 7 with Prisma ORM compatibility guide",
+    "description": "MongoDB 7 with Prisma ORM compatibility guide. Practical compatibility covering implementation patterns, trade-offs, and recommendations for production engineers.",
+    "category": "compatibility",
+    "category_display": "Compatibility",
+    "date_published": "2026-03-13",
+    "reading_time_minutes": 6,
+    "tags": [
+      "compatibility",
+      "mongodb",
+      "orm",
+      "prisma"
+    ]
+  },
+  {
     "slug": "best-cheap-vps-hosting-for-developers-in-2026",
     "title": "Best cheap VPS hosting for developers in 2026",
     "description": "Best cheap VPS hosting for developers in 2026. Practical guide covering implementation patterns, trade-offs, and recommendations for production engineers.",
