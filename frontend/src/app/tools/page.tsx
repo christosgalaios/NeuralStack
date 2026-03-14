@@ -75,7 +75,7 @@ export default function ToolsPage() {
 
       <AdSlot position="bottom" className="mt-8" />
 
-      {/* Product schema */}
+      {/* Structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -86,10 +86,16 @@ export default function ToolsPage() {
               "@type": "ListItem",
               position: i + 1,
               item: {
-                "@type": "Product",
+                "@type": "SoftwareApplication",
                 name: aff.name,
                 description: aff.description,
                 url: aff.url,
+                applicationCategory: "DeveloperApplication",
+                offers: {
+                  "@type": "Offer",
+                  price: "0",
+                  priceCurrency: "USD",
+                },
               },
             })),
           }),
