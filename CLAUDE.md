@@ -1,3 +1,5 @@
+> **Cross-project rules:** See [`claude-shared`](https://github.com/christosgalaios/claude-shared) repo (`~/.claude/claude-shared/CLAUDE.md`). Run `bash setup.sh` on new machines.
+
 # CLAUDE.md — Autonomous Content Pipeline
 
 > **Purpose of this file**: Project brain for AI session continuity. Read this
