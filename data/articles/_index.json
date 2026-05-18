@@ -1,5 +1,98 @@
 [
   {
+    "slug": "github-copilot-cli-vs-lapce-for-data-scientists",
+    "title": "GitHub Copilot CLI vs Lapce for data scientists",
+    "description": "GitHub Copilot CLI vs Lapce for data scientists. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-18",
+    "reading_time_minutes": 8,
+    "tags": [
+      "cli",
+      "comparison",
+      "copilot",
+      "data",
+      "github",
+      "lapce",
+      "scientists"
+    ]
+  },
+  {
+    "slug": "github-copilot-cli-vs-lapce-for-devops-engineers",
+    "title": "GitHub Copilot CLI vs Lapce for DevOps engineers",
+    "description": "GitHub Copilot CLI vs Lapce for DevOps engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-18",
+    "reading_time_minutes": 8,
+    "tags": [
+      "cli",
+      "comparison",
+      "copilot",
+      "devops",
+      "engineers",
+      "github",
+      "lapce"
+    ]
+  },
+  {
+    "slug": "github-copilot-cli-vs-lapce-for-frontend-react-developers",
+    "title": "GitHub Copilot CLI vs Lapce for frontend React developers",
+    "description": "GitHub Copilot CLI vs Lapce for frontend React developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-18",
+    "reading_time_minutes": 8,
+    "tags": [
+      "cli",
+      "comparison",
+      "copilot",
+      "developers",
+      "frontend",
+      "github",
+      "lapce",
+      "react"
+    ]
+  },
+  {
+    "slug": "github-copilot-cli-vs-lapce-for-mobile-developers",
+    "title": "GitHub Copilot CLI vs Lapce for mobile developers",
+    "description": "GitHub Copilot CLI vs Lapce for mobile developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-18",
+    "reading_time_minutes": 8,
+    "tags": [
+      "cli",
+      "comparison",
+      "copilot",
+      "developers",
+      "github",
+      "lapce",
+      "mobile"
+    ]
+  },
+  {
+    "slug": "github-copilot-cli-vs-nova-by-panic-for-full-stack-developers",
+    "title": "GitHub Copilot CLI vs Nova by Panic for full-stack developers",
+    "description": "GitHub Copilot CLI vs Nova by Panic for full-stack developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-18",
+    "reading_time_minutes": 8,
+    "tags": [
+      "cli",
+      "comparison",
+      "copilot",
+      "developers",
+      "full",
+      "github",
+      "nova",
+      "panic",
+      "stack"
+    ]
+  },
+  {
     "slug": "github-copilot-cli-vs-helix-editor-for-frontend-react-developers",
     "title": "GitHub Copilot CLI vs Helix editor for frontend React developers",
     "description": "GitHub Copilot CLI vs Helix editor for frontend React developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
