@@ -1,5 +1,96 @@
 [
   {
+    "slug": "sublime-text-vs-zed-editor-for-data-scientists",
+    "title": "Sublime Text vs Zed editor for data scientists",
+    "description": "Sublime Text vs Zed editor for data scientists. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-22",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "data",
+      "editor",
+      "scientists",
+      "sublime",
+      "text",
+      "zed"
+    ]
+  },
+  {
+    "slug": "sublime-text-vs-zed-editor-for-devops-engineers",
+    "title": "Sublime Text vs Zed editor for DevOps engineers",
+    "description": "Sublime Text vs Zed editor for DevOps engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-22",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "devops",
+      "editor",
+      "engineers",
+      "sublime",
+      "text",
+      "zed"
+    ]
+  },
+  {
+    "slug": "sublime-text-vs-zed-editor-for-frontend-react-developers",
+    "title": "Sublime Text vs Zed editor for frontend React developers",
+    "description": "Sublime Text vs Zed editor for frontend React developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-22",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "frontend",
+      "react",
+      "sublime",
+      "text",
+      "zed"
+    ]
+  },
+  {
+    "slug": "sublime-text-vs-zed-editor-for-mobile-developers",
+    "title": "Sublime Text vs Zed editor for mobile developers",
+    "description": "Sublime Text vs Zed editor for mobile developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-22",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "mobile",
+      "sublime",
+      "text",
+      "zed"
+    ]
+  },
+  {
+    "slug": "sublime-text-vs-zed-editor-for-rust-developers",
+    "title": "Sublime Text vs Zed editor for Rust developers",
+    "description": "Sublime Text vs Zed editor for Rust developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-22",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "rust",
+      "sublime",
+      "text",
+      "zed"
+    ]
+  },
+  {
     "slug": "sublime-text-vs-vs-code-for-devops-engineers",
     "title": "Sublime Text vs VS Code for DevOps engineers",
     "description": "Sublime Text vs VS Code for DevOps engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
