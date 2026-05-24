@@ -1,5 +1,96 @@
 [
   {
+    "slug": "helix-editor-vs-jetbrains-fleet-for-full-stack-developers",
+    "title": "Helix editor vs JetBrains Fleet for full-stack developers",
+    "description": "Helix editor vs JetBrains Fleet for full-stack developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-24",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "fleet",
+      "full",
+      "helix",
+      "jetbrains",
+      "stack"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-jetbrains-fleet-for-python-backend-engineers",
+    "title": "Helix editor vs JetBrains Fleet for Python backend engineers",
+    "description": "Helix editor vs JetBrains Fleet for Python backend engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-24",
+    "reading_time_minutes": 8,
+    "tags": [
+      "backend",
+      "comparison",
+      "editor",
+      "engineers",
+      "fleet",
+      "helix",
+      "jetbrains",
+      "python"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-jetbrains-fleet-for-rust-developers",
+    "title": "Helix editor vs JetBrains Fleet for Rust developers",
+    "description": "Helix editor vs JetBrains Fleet for Rust developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-24",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "fleet",
+      "helix",
+      "jetbrains",
+      "rust"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-vs-code-for-frontend-react-developers",
+    "title": "Helix editor vs VS Code for frontend React developers",
+    "description": "Helix editor vs VS Code for frontend React developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-24",
+    "reading_time_minutes": 8,
+    "tags": [
+      "code",
+      "comparison",
+      "developers",
+      "editor",
+      "frontend",
+      "helix",
+      "react"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-vs-code-for-mobile-developers",
+    "title": "Helix editor vs VS Code for mobile developers",
+    "description": "Helix editor vs VS Code for mobile developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-24",
+    "reading_time_minutes": 7,
+    "tags": [
+      "code",
+      "comparison",
+      "developers",
+      "editor",
+      "helix",
+      "mobile"
+    ]
+  },
+  {
     "slug": "helix-editor-vs-vs-code-for-data-scientists",
     "title": "Helix editor vs VS Code for data scientists",
     "description": "Helix editor vs VS Code for data scientists. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
