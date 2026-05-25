@@ -1,5 +1,96 @@
 [
   {
+    "slug": "helix-editor-vs-jetbrains-fleet-for-data-scientists",
+    "title": "Helix editor vs JetBrains Fleet for data scientists",
+    "description": "Helix editor vs JetBrains Fleet for data scientists. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-25",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "data",
+      "editor",
+      "fleet",
+      "helix",
+      "jetbrains",
+      "scientists"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-jetbrains-fleet-for-devops-engineers",
+    "title": "Helix editor vs JetBrains Fleet for DevOps engineers",
+    "description": "Helix editor vs JetBrains Fleet for DevOps engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-25",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "devops",
+      "editor",
+      "engineers",
+      "fleet",
+      "helix",
+      "jetbrains"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-jetbrains-fleet-for-frontend-react-developers",
+    "title": "Helix editor vs JetBrains Fleet for frontend React developers",
+    "description": "Helix editor vs JetBrains Fleet for frontend React developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-25",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "fleet",
+      "frontend",
+      "helix",
+      "jetbrains",
+      "react"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-jetbrains-fleet-for-mobile-developers",
+    "title": "Helix editor vs JetBrains Fleet for mobile developers",
+    "description": "Helix editor vs JetBrains Fleet for mobile developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-25",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "fleet",
+      "helix",
+      "jetbrains",
+      "mobile"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-neovim-for-full-stack-developers",
+    "title": "Helix editor vs Neovim for full-stack developers",
+    "description": "Helix editor vs Neovim for full-stack developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-25",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "full",
+      "helix",
+      "neovim",
+      "stack"
+    ]
+  },
+  {
     "slug": "helix-editor-vs-jetbrains-fleet-for-full-stack-developers",
     "title": "Helix editor vs JetBrains Fleet for full-stack developers",
     "description": "Helix editor vs JetBrains Fleet for full-stack developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
