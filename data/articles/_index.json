@@ -1,5 +1,95 @@
 [
   {
+    "slug": "helix-editor-vs-sublime-text-for-full-stack-developers",
+    "title": "Helix editor vs Sublime Text for full-stack developers",
+    "description": "Helix editor vs Sublime Text for full-stack developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-28",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "full",
+      "helix",
+      "stack",
+      "sublime",
+      "text"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-sublime-text-for-python-backend-engineers",
+    "title": "Helix editor vs Sublime Text for Python backend engineers",
+    "description": "Helix editor vs Sublime Text for Python backend engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-28",
+    "reading_time_minutes": 7,
+    "tags": [
+      "backend",
+      "comparison",
+      "editor",
+      "engineers",
+      "helix",
+      "python",
+      "sublime",
+      "text"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-zed-editor-for-devops-engineers",
+    "title": "Helix editor vs Zed editor for DevOps engineers",
+    "description": "Helix editor vs Zed editor for DevOps engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-28",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "devops",
+      "editor",
+      "engineers",
+      "helix",
+      "zed"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-zed-editor-for-frontend-react-developers",
+    "title": "Helix editor vs Zed editor for frontend React developers",
+    "description": "Helix editor vs Zed editor for frontend React developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-28",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "frontend",
+      "helix",
+      "react",
+      "zed"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-zed-editor-for-mobile-developers",
+    "title": "Helix editor vs Zed editor for mobile developers",
+    "description": "Helix editor vs Zed editor for mobile developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-28",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "helix",
+      "mobile",
+      "zed"
+    ]
+  },
+  {
     "slug": "helix-editor-vs-neovim-for-frontend-react-developers",
     "title": "Helix editor vs Neovim for frontend React developers",
     "description": "Helix editor vs Neovim for frontend React developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
