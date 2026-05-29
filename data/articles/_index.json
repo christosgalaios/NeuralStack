@@ -1,5 +1,96 @@
 [
   {
+    "slug": "helix-editor-vs-sublime-text-for-data-scientists",
+    "title": "Helix editor vs Sublime Text for data scientists",
+    "description": "Helix editor vs Sublime Text for data scientists. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-29",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "data",
+      "editor",
+      "helix",
+      "scientists",
+      "sublime",
+      "text"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-sublime-text-for-devops-engineers",
+    "title": "Helix editor vs Sublime Text for DevOps engineers",
+    "description": "Helix editor vs Sublime Text for DevOps engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-29",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "devops",
+      "editor",
+      "engineers",
+      "helix",
+      "sublime",
+      "text"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-sublime-text-for-frontend-react-developers",
+    "title": "Helix editor vs Sublime Text for frontend React developers",
+    "description": "Helix editor vs Sublime Text for frontend React developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-29",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "frontend",
+      "helix",
+      "react",
+      "sublime",
+      "text"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-sublime-text-for-mobile-developers",
+    "title": "Helix editor vs Sublime Text for mobile developers",
+    "description": "Helix editor vs Sublime Text for mobile developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-29",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "helix",
+      "mobile",
+      "sublime",
+      "text"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-sublime-text-for-rust-developers",
+    "title": "Helix editor vs Sublime Text for Rust developers",
+    "description": "Helix editor vs Sublime Text for Rust developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-29",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "helix",
+      "rust",
+      "sublime",
+      "text"
+    ]
+  },
+  {
     "slug": "helix-editor-vs-sublime-text-for-full-stack-developers",
     "title": "Helix editor vs Sublime Text for full-stack developers",
     "description": "Helix editor vs Sublime Text for full-stack developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
