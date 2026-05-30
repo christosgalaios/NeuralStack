@@ -1,5 +1,92 @@
 [
   {
+    "slug": "helix-editor-vs-lapce-for-data-scientists",
+    "title": "Helix editor vs Lapce for data scientists",
+    "description": "Helix editor vs Lapce for data scientists. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-30",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "data",
+      "editor",
+      "helix",
+      "lapce",
+      "scientists"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-lapce-for-devops-engineers",
+    "title": "Helix editor vs Lapce for DevOps engineers",
+    "description": "Helix editor vs Lapce for DevOps engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-30",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "devops",
+      "editor",
+      "engineers",
+      "helix",
+      "lapce"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-lapce-for-full-stack-developers",
+    "title": "Helix editor vs Lapce for full-stack developers",
+    "description": "Helix editor vs Lapce for full-stack developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-30",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "full",
+      "helix",
+      "lapce",
+      "stack"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-lapce-for-python-backend-engineers",
+    "title": "Helix editor vs Lapce for Python backend engineers",
+    "description": "Helix editor vs Lapce for Python backend engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-30",
+    "reading_time_minutes": 7,
+    "tags": [
+      "backend",
+      "comparison",
+      "editor",
+      "engineers",
+      "helix",
+      "lapce",
+      "python"
+    ]
+  },
+  {
+    "slug": "helix-editor-vs-lapce-for-rust-developers",
+    "title": "Helix editor vs Lapce for Rust developers",
+    "description": "Helix editor vs Lapce for Rust developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-05-30",
+    "reading_time_minutes": 7,
+    "tags": [
+      "comparison",
+      "developers",
+      "editor",
+      "helix",
+      "lapce",
+      "rust"
+    ]
+  },
+  {
     "slug": "helix-editor-vs-sublime-text-for-data-scientists",
     "title": "Helix editor vs Sublime Text for data scientists",
     "description": "Helix editor vs Sublime Text for data scientists. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",

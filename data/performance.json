@@ -996,9 +996,17 @@
       "generated_articles": 5,
       "published_articles": 5,
       "errors": []
+    },
+    {
+      "timestamp": "2026-05-30T06:28:06.930130Z",
+      "status": "success",
+      "generated_topics": 5,
+      "generated_articles": 5,
+      "published_articles": 5,
+      "errors": []
     }
   ],
-  "articles_published": 593,
-  "last_run": "2026-05-29T06:59:51.710171Z",
+  "articles_published": 598,
+  "last_run": "2026-05-30T06:28:06.930130Z",
   "errors": []
 }
