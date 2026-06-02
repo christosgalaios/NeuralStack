@@ -1,5 +1,86 @@
 [
   {
+    "slug": "lapce-vs-vs-code-for-data-scientists",
+    "title": "Lapce vs VS Code for data scientists",
+    "description": "Lapce vs VS Code for data scientists. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-06-02",
+    "reading_time_minutes": 7,
+    "tags": [
+      "code",
+      "comparison",
+      "data",
+      "lapce",
+      "scientists"
+    ]
+  },
+  {
+    "slug": "lapce-vs-vs-code-for-devops-engineers",
+    "title": "Lapce vs VS Code for DevOps engineers",
+    "description": "Lapce vs VS Code for DevOps engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-06-02",
+    "reading_time_minutes": 7,
+    "tags": [
+      "code",
+      "comparison",
+      "devops",
+      "engineers",
+      "lapce"
+    ]
+  },
+  {
+    "slug": "lapce-vs-vs-code-for-mobile-developers",
+    "title": "Lapce vs VS Code for mobile developers",
+    "description": "Lapce vs VS Code for mobile developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-06-02",
+    "reading_time_minutes": 7,
+    "tags": [
+      "code",
+      "comparison",
+      "developers",
+      "lapce",
+      "mobile"
+    ]
+  },
+  {
+    "slug": "lapce-vs-vs-code-for-python-backend-engineers",
+    "title": "Lapce vs VS Code for Python backend engineers",
+    "description": "Lapce vs VS Code for Python backend engineers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-06-02",
+    "reading_time_minutes": 8,
+    "tags": [
+      "backend",
+      "code",
+      "comparison",
+      "engineers",
+      "lapce",
+      "python"
+    ]
+  },
+  {
+    "slug": "lapce-vs-vs-code-for-rust-developers",
+    "title": "Lapce vs VS Code for Rust developers",
+    "description": "Lapce vs VS Code for Rust developers. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
+    "category": "comparison",
+    "category_display": "Comparison",
+    "date_published": "2026-06-02",
+    "reading_time_minutes": 7,
+    "tags": [
+      "code",
+      "comparison",
+      "developers",
+      "lapce",
+      "rust"
+    ]
+  },
+  {
     "slug": "helix-editor-vs-nova-by-panic-for-data-scientists",
     "title": "Helix editor vs Nova by Panic for data scientists",
     "description": "Helix editor vs Nova by Panic for data scientists. Side-by-side comparison covering pricing, features, performance, and real-world trade-offs for production engineers.",
